@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const axios = require('axios')
+
 const {adsWithState} = require("./adsWithState.js")
 app.use(express.static('public'))
 
