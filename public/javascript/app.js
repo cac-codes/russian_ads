@@ -10,6 +10,17 @@ var info = L.control();
 var stamenLayer = new L.StamenTileLayer("toner");
 map.addLayer(stamenLayer);
 
+
+// mapbox layer (replaced with stamen layer for now)
+// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
+//     id: 'mapbox/light-v9',
+//     attribution: 'Mapbox',
+//     tileSize: 512,
+//     zoomOffset: -1,
+//     minZoom: 3,
+//     maxZoom: 6
+// }).addTo(map);
+
 // variables for data access
 
 
@@ -82,6 +93,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     minZoom: 3,
     maxZoom: 6
 }).addTo(map);
+
 
 // Drawing state bounds using the co-ordinates in statesData object and adding them to the map
 L.geoJson(statesData).addTo(map);
@@ -173,12 +185,9 @@ info.update = function (props) {
 
 info.addTo(map);
 
-
-
-
-
 var img =  infoTesting.data.cropped_image
 var location_test = infoTesting.data.location
 var adSpend = infoTesting.data.ad_spend
 var impressions = infoTesting.data.impressions
 var adInterestsAlsoMatch = infoTesting.data.interests_also_match
+
