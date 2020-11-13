@@ -41,6 +41,6 @@ fs.readFile("data.json", function (error, content){
         }
     });
     // console.log(allAdsWithState)
-    fs.writeFileSync("adsWithState.js", JSON.stringify(allAdsWithState))
+    fs.writeFileSync("adsWithState.js", allAdsWithState)
 })
 
