@@ -1,13 +1,19 @@
-var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
-var map = L.map('mapid').setView([37.8, -96], 4);
+// not needed if using stamen instead of mapbox
+// var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
 
+
+
+var map = L.map('mapid').setView([37.8, -96], 3.8).setMaxBounds([[29.712, -88.227],
+    [45.774, -101.125]]);
+
+// create variable for geojson
 var geojson;
 
 // custom info variable
 var info = L.control();
 
 // stamen map
-var stamenLayer = new L.StamenTileLayer("toner");
+var stamenLayer = new L.StamenTileLayer("watercolor");
 map.addLayer(stamenLayer);
 
 // mapbox layer (replaced with stamen layer for now)
@@ -106,7 +112,7 @@ info.onAdd = function (map) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+    this._div.innerHTML = '<h4>State Data</h4>' +  (props ?
         '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
         : 'Hover over a state');
 };
