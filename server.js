@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios')
 
-app.use(express.static('views'))
+app.use(express.static('public'))
 
 app.get('/api/ads/:state', (req, res) => {
     var adsByState = {}
