@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaflet Test</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/flip-cards.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -15,6 +16,20 @@
 <body>
     <div id="mapid"></div>
     
+    <!-- Div for flip cards -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img_avatar.png" alt="Avatar" style="width:200px;height:200px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Texas</h1>
+          <p>adverts: 43</p>
+          <p>radicalisation: high</p>
+        </div>
+      </div>
+    </div>
+
     
     <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
     <script src="javascript/coordinates.js"></script>
