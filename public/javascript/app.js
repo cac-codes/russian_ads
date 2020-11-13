@@ -23,12 +23,13 @@ map.addLayer(stamenLayer);
 // Drawing state bounds using the co-ordinates in statesData object and adding them to the map
 L.geoJson(statesData).addTo(map);
 
-
+// get color for state layer style
 function getColor(name) {
     return name.includes("a") ? '#b7e3fc' :
                                 '#b7e3fc';
 }
 
+// state layer style
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.name),
@@ -40,10 +41,11 @@ function style(feature) {
     };
 }
 
+// apply style function styles to states
 L.geoJson(statesData, {style: style}).addTo(map);
 
 
-// mouseover
+// mouseover states function
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -58,11 +60,11 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-    // custom info
+    // custom info box
     info.update(layer.feature.properties);
 }
 
-// mouseout
+// mouseout of states function to reset layer style
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 
@@ -74,12 +76,12 @@ geojson = L.geoJson(statesData);
 
 
 
-// click listener
+// click listener to zoom on clicked state
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
 
-
+// function calling mouseover/mouseout/click listeners
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -88,6 +90,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
+// add style and event listener functions to each state
 geojson = L.geoJson(statesData, {
     style: style,
     onEachFeature: onEachFeature
@@ -108,4 +111,5 @@ info.update = function (props) {
         : 'Hover over a state');
 };
 
+// add custom info box to map
 info.addTo(map);
