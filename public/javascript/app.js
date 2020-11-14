@@ -1,13 +1,19 @@
-var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
-var map = L.map('mapid').setView([37.8, -96], 4);
+// mapbox key - not needed if using stamen instead of mapbox
+// var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
 
+
+
+var map = L.map('mapid').setView([37.8, -96], 4).setMaxBounds([[55.234131, -142.700240],
+    [16.296385, -55.392384]]);
+
+// create variable for geojson
 var geojson;
 
 // custom info variable
 var info = L.control();
 
 // stamen map
-var stamenLayer = new L.StamenTileLayer("toner");
+var stamenLayer = new L.StamenTileLayer("watercolor");
 map.addLayer(stamenLayer);
 
 
@@ -105,12 +111,13 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // Drawing state bounds using the co-ordinates in statesData object and adding them to the map
 L.geoJson(statesData).addTo(map);
 
-
+// get color for state layer style
 function getColor(name) {
     return name.includes("a") ? '#b7e3fc' :
                                 '#b7e3fc';
 }
 
+// state layer style
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.name),
@@ -122,10 +129,11 @@ function style(feature) {
     };
 }
 
+// apply style function styles to states
 L.geoJson(statesData, {style: style}).addTo(map);
 
 
-// mouseover
+// mouseover states function
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -140,11 +148,11 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-    // custom info
+    // custom info box
     info.update(layer.feature.properties);
 }
 
-// mouseout
+// mouseout of states function to reset layer style
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 
@@ -156,12 +164,14 @@ geojson = L.geoJson(statesData);
 
 
 
-// click listener
+// click listener to zoom on clicked state
 function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
+    if (map._zoom < 5) {
+        map.fitBounds(e.target.getBounds());
+    }
 }
 
-
+// function calling mouseover/mouseout/click listeners
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -170,6 +180,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
+// add style and event listener functions to each state
 geojson = L.geoJson(statesData, {
     style: style,
     onEachFeature: onEachFeature
@@ -185,11 +196,12 @@ info.onAdd = function (map) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+    this._div.innerHTML = '<h4>State Data</h4>' +  (props ?
         '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
         : 'Hover over a state');
 };
 
+// add custom info box to map
 info.addTo(map);
 
 var img =  infoTesting.data.cropped_image
