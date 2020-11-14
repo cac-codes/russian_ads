@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaflet Test</title>
+    <!-- css links -->
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/flip-cards.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <!-- mapping links -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -13,11 +20,75 @@
     crossorigin=""></script>
 </head>
 <body>
-    <div id="mapid"></div>
-    
-    
+    <!-- header div -->
+  <header class="project-title-div"> title of project here</header>
+
+  <article class="main_container">  
+
+
+<!-- left column start) -->     
+    <article class="left-column"> 
+<!-- Div for map (left column)-->
+        <div class="map-container">
+          <div id="mapid"></div>
+        </div> 
+<!-- Div for information(left column) -->
+        <div class="location-info-section">
+          <h1 class="location-info-name">USA</h1>
+          <div class="location-info-stats">information here regarding stats</div>
+        </div>
+   
+<!-- two lists of targets(left column) -->
+          <div class="target-groups-section">
+              <div class="target-description"></div>
+              <div class="target-column-left">
+                <li>anti-Muslim: 2342</li>
+                <li>White Nationalist: 2342</li>
+                <li>Black Power: 2342</li>
+                <li>Hispanic: 2342</li>
+                <li>LGBTQ: 2342</li>
+              </div>
+
+              <div class="target-column-right">
+                <li>Muslim: 2342</li>
+                <li>Prisoners: 2342</li>
+                <li>Concervative Gun-Owners: 2342</li>
+                <li>Libertarians: 2342</li>
+                <li>Police Forces: 2342</li>
+              </div>
+          </div>
+        </div>
+        <div class=left-column-footer>
+        </div>
+    </article>
+<!-- left column end) -->   
+
+
+<!-- right column start-->
+<section class="right-column">
+<!-- right column filter title-->
+  <div class="advert-filter-div">
+     <div class="advert-filter-title">filter:</div>
+     <div class="advert-filter-impressions">impressions</div>
+     <div class="advert-filter-ad_spend">money spend</div>
+  </div>
+  <div class="advert-container">
+<!-- singlecard -->
+          <div class="scene scene--card">
+            <div class="card">
+              <div class="card__face card__face--front"><img id="advert" src="https://hexagram.io/analysis/crop/P0001894-1.png" alt=""></div>
+              <div class="card__face card__face--back">back</div>
+            </div>
+          </div>
+          <p>Click card to flip.</p>		
+  </div>
+</section>
+
+  </article>
+
     <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
     <script src="javascript/coordinates.js"></script>
+    <script src="javascript/advertarray.js"></script>
     <script src="javascript/app.js"></script>
 </body>
 </html>

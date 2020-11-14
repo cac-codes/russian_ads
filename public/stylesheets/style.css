@@ -1,5 +1,148 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: grid;
+  justify-content: center;
+}
+
+h4 {
+  color: #232320 
+}
+/* header */
+.project-title-div {
+background-color: #D53927 ;
+color: #CCCCCB ;
+height: 30rem;
+}
+
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+/* left side */
+.left-column{
+  background-color: green ;
+  color: #CCCCCB ;
+  width: 60rem;
+  display: grid;
+  justify-content: center;
+  }
+
+.map-container {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+
+.location-info-section{
+  background-color: rgb(255, 140, 0);
+  height: 10rem;;
+}
+
+.location-info-name {
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 6rem;
+  font-style: inherit;
+  margin-left: 1rem;
+  margin-bottom: -1rem;
+}
+.location-info-stats {
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  size: 100px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  
+} 
+
+.target-groups-section {
+    display: grid;
+    grid-template-columns: .5fr 1.5fr 1.5fr .5fr;
+    background-color: rgb(251, 0, 255) ;
+  }
+
+/* .target-description {
+  font-family: 'Nunito', sans-serif;
+ margin-left: 1rem;
+ margin-top: 1rem;
+} */
+
+.target-column-left, .target-column-right{
+  list-style-type: none;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.left-column-footer{
+  background-color: red;
+  height: 10rem;
+}
+
+/* right side */
+
+.right-column {
+  background-color: blue ;
+  }
+.advert-filter-div {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  justify-content: center;
+  background-color: rgb(51, 255, 0) ;
+  height: 5rem;
+}
+.advert-filter-title{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+
+}
+.advert-filter-impressions{
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  text-align: right;
+  font-size: 1.5rem;
+
+}
+
+.advert-filter-ad_spend {
+  margin-top: 1rem;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+}
+.advert-container{
+  grid-column-start: auto;
+  justify-content: center;
+  
+}
+
+
+
+
+/* map */
+
 #mapid {
-  height: 360px;
+  height: 50rem;
+  width: 50rem;
 }
 ​
 .info {
