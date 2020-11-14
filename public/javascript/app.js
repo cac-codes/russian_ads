@@ -1,10 +1,10 @@
-// not needed if using stamen instead of mapbox
+// mapbox key - not needed if using stamen instead of mapbox
 // var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
 
 
 
-var map = L.map('mapid').setView([37.8, -96], 3.8).setMaxBounds([[29.712, -88.227],
-    [45.774, -101.125]]);
+var map = L.map('mapid').setView([37.8, -96], 4).setMaxBounds([[55.234131, -142.700240],
+    [16.296385, -55.392384]]);
 
 // create variable for geojson
 var geojson;
@@ -84,7 +84,9 @@ geojson = L.geoJson(statesData);
 
 // click listener to zoom on clicked state
 function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
+    if (map._zoom < 5) {
+        map.fitBounds(e.target.getBounds());
+    }
 }
 
 // function calling mouseover/mouseout/click listeners
