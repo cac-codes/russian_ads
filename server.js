@@ -13,10 +13,15 @@ app.get('/api/ads/:state', (req, res) => {
         const isState = data[i][1].state
         if (isState && isState === req.params.state) {
 
+
             array.push(data[i])
+
         }
+
     }
+
     res.send(array.flat())
+
 })
 
 
@@ -24,3 +29,4 @@ app.listen(4567, () => {
     console.log('listening on port 4567')
 });
 
+module.exports = {array}
