@@ -24,6 +24,13 @@ map.addLayer(stamenLayer);
 // variables for data access
 
 
+// for flip cards on main page
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
+
 const infoTesting = {
   "data": {
   "likes_of_friends": null,
