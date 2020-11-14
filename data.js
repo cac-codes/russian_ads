@@ -36,11 +36,12 @@ fs.readFile("data.json", function (error, content){
                 image: ad.cropped_image,
                 ad_spend: ad.ad_spend,
                 impressions: ad.impressions,
-                interests: ad.interests_also_match,
+                interests: ad.interests,
+                interests_also_match: ad.interests_also_match
             }
         }
     });
-    // console.log(allAdsWithState)
-    fs.writeFileSync("adsWithState.js", allAdsWithState)
+    console.log(allAdsWithState)
+    fs.writeFileSync("adsWithState.js", JSON.stringify(allAdsWithState))
 })
 
