@@ -1,51 +1,86 @@
-* {
+* 
+{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   align-items: center;
   display: grid;
   justify-content: center;
+  background-color: #d53927;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallp  aper.png");
 }
 
-h4 {
+h4 
+{
   color: #232320 
 }
+
 /* header */
-.project-title-div {
+
+.project-title-div 
+{
+position: relative;
+display: inline-block;
 background-color: #D53927 ;
-color: #CCCCCB ;
-height: 30rem;
+color: #F7BC87; ;
+height: 50rem;
 }
 
+.titlecard 
+{
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 6rem;
+  transform: rotate(-90deg);
+  transform-origin: 20% 100%;
 
-.main_container {
+}
+
+.overlayed-hand
+{
+  position: absolute;
+  transform: rotate(-30deg);
+  transform-origin: 60% -200%;
+  width: 70rem;
+  background-color: transparent;
+ }
+
+
+
+.main_container 
+{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr .5fr;
     justify-content: center;
 }
 
 /* left side */
-.left-column{
-  background-color: green ;
+
+.left-column
+{
+  background-color: #D53927 ;
   color: #CCCCCB ;
   width: 60rem;
   display: grid;
   justify-content: center;
-  }
+}
 
-.map-container {
+.map-container 
+{
   display: grid;
   justify-content: center;
   padding-bottom: 1rem;
 }
 
 
-.location-info-section{
-  background-color: rgb(255, 140, 0);
-  height: 10rem;;
+.location-info-section
+{
+  background-color: #D53927;
+  height: 14rem;;
 }
 
 .location-info-name {
@@ -53,73 +88,112 @@ height: 30rem;
   font-family: 'Nunito', sans-serif;
   font-size: 6rem;
   font-style: inherit;
-  margin-left: 1rem;
   margin-bottom: -1rem;
 }
-.location-info-stats {
+
+.location-info-deployed {
   color: #F7BC87;
   font-family: 'Nunito', sans-serif;
-  size: 100px;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  padding-bottom: 4rem;
   
 } 
 
-.target-groups-section {
-    display: grid;
-    grid-template-columns: .5fr 1.5fr 1.5fr .5fr;
-    background-color: rgb(251, 0, 255) ;
-  }
+.location-deployed-result
+{
+  padding-right: 1rem;
+  text-align: left;
+  color: #232320;
+}
 
-/* .target-description {
+
+.location-info-spent {
+  color: #F7BC87;
   font-family: 'Nunito', sans-serif;
- margin-left: 1rem;
- margin-top: 1rem;
-} */
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  padding-bottom: 4rem;
+  
+} 
 
-.target-column-left, .target-column-right{
+.location-spent-result
+{
+  
+  text-align: left;
+  color: #232320;
+}
+
+.with 
+{
+  padding-right: 1rem;
+  text-align: left
+}
+.paid 
+{
+  padding-left: 1rem;
+  text-align: right
+}
+
+
+
+.target-groups-section 
+{
+  display: grid;
+  grid-template-columns: .5fr 1fr 1fr;
+  background-color: #D53927;
+
+
+}
+
+
+.target-column-left, .target-column-right
+{
   list-style-type: none;
   color: #F7BC87;
   font-family: 'Nunito', sans-serif;
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
-  margin-left: 1rem;
+  padding-left: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.left-column-footer{
-  background-color: red;
+
+.result 
+{
+  text-align: right;
+  color: #232320;
+}
+
+tr 
+{
+  margin-bottom: 1rem;
+}
+
+.left-column-footer
+{
+  background-color: #D53927;
   height: 10rem;
 }
 
 /* right side */
 
-.right-column {
-  background-color: blue ;
-  }
-.advert-filter-div {
+.right-column 
+{
+  background-color: #D53927;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
   justify-content: center;
-  background-color: rgb(51, 255, 0) ;
-  height: 5rem;
-}
-.advert-filter-title{
-  margin-left: 1rem;
-  margin-top: 1rem;
-  color: #F7BC87;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
+  }
 
-}
-.advert-filter-impressions{
+
+.advert-filter-impressions
+{
   margin-top: 1rem;
   margin-right: 1rem;
   color: #F7BC87;
   font-family: 'Nunito', sans-serif;
   text-align: right;
   font-size: 1.5rem;
-
 }
 
 .advert-filter-ad_spend {
@@ -129,23 +203,26 @@ height: 30rem;
   text-align: left;
   font-size: 1.5rem;
 }
-.advert-container{
+
+.advert-container
+{
   grid-column-start: auto;
-  justify-content: center;
-  
+  justify-content: start;
+  max-width: max-content;
+  padding-right: 2rem;
 }
-
-
 
 
 /* map */
 
-#mapid {
+#mapid 
+{
   height: 50rem;
   width: 50rem;
 }
 ​
-.info {
+.info 
+{
   padding: 6px 8px;
   font: 14px/16px Arial, Helvetica, sans-serif;
   background: white;
@@ -153,7 +230,9 @@ height: 30rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
 }
-.info h4 {
+
+.info h4 
+{
   margin: 0 0 5px;
   color: #777;
 }

@@ -1,15 +1,67 @@
-body { font-family: sans-serif; }
-
-.scene {
-  width: 40rem;
-  height: 40rem;
-  border: 1px solid #CCC;
-  margin: 40px 0;
-  perspective: 600px;
-  background-color: black;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.card {
+/* filter adver navbar  */
+
+.filter-nav
+{
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+}
+
+ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #65180f;
+}
+  
+li 
+{
+  float: left;
+}
+  
+li a
+{
+  display: block;
+  color:  #F7BC87;
+  text-align: center;
+  padding: 2rem 2rem;
+  text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+
+li a:hover 
+{
+  background-color: #232320;
+}
+
+
+body
+{  
+ color: #F7BC87;
+ font-family: 'Nunito', sans-serif;
+ font-size: 1rem;
+}
+
+.scene 
+{
+  width: 25rem;
+  height: 25rem;
+  margin: 40px 0;
+  perspective: 600px;
+  background-color: #D53927;
+}
+
+.card 
+{
   position: relative;
   width: 100%;
   height: 100%;
@@ -19,39 +71,46 @@ body { font-family: sans-serif; }
   transition: transform 1s;
 }
 
-.card.is-flipped {
+.card.is-flipped 
+{
   transform: translateX(-100%) rotateY(-180deg);
 }
 
-.card__face {
+.card__face 
+{
   position: absolute;
   width: 100%;
   height: 100%;
   line-height: 260px;
-  color: white;
+  color: #232320;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   backface-visibility: hidden;
 }
 
-.card__face--front {
+.card__face--front 
+{
   
   background-image: "https://hexagram.io/analysis/crop/P0001894-1.png" ;
 }
 
-.card__face--back {
-  background: blue;
+.card__face--back 
+{
+  background-color: #f7bc87;
+background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
   transform: rotateY(180deg);
 }
 
-#advert {
+#advert 
+{
   max-width: 100%;
   max-height: 100%;
   filter: grayscale(100%);
 }
 
-#advert:hover {
+#advert:hover 
+{
   filter: none;
     
 }
