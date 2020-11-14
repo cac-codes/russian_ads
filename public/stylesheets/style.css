@@ -104,13 +104,6 @@ height: 30rem;
   background-color: rgb(51, 255, 0) ;
   height: 5rem;
 }
-
-.advert-container{
-  grid-column-start: auto;
-  
-}
-
-
 .advert-filter-title{
   margin-left: 1rem;
   margin-top: 1rem;
@@ -136,6 +129,14 @@ height: 30rem;
   text-align: left;
   font-size: 1.5rem;
 }
+.advert-container{
+  grid-column-start: auto;
+  justify-content: center;
+  
+}
+
+
+
 
 /* map */
 
