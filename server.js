@@ -98,4 +98,3 @@ app.listen(4567, () => {
     console.log('listening on port 4567')
 });
 
-// module.exports = {array}
