@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet Test</title>
+    <title>Russian Ads For You</title>
     <!-- css links -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/flip-cards.css">
@@ -20,69 +20,155 @@
     crossorigin=""></script>
 </head>
 <body>
-    <!-- header div -->
-  <header class="project-title-div"> title of project here</header>
 
-  <article class="main_container">  
+<!-- header title and hand -->
 
-
+<header class="project-title-div"> 
+  <div class="titlecard">RUSSIAN</div>
+</header>
+  <div class="overlayed-hand">
+    <img src="img/hand_russia_hand.svg" 
+      data-speed="5" class="layer"
+        />
+  </div>
+ 
+  
+<article class="main_container">  
 <!-- left column start) -->     
-    <article class="left-column"> 
+  <article class="left-column"> 
 <!-- Div for map (left column)-->
-        <div class="map-container">
-          <div id="mapid"></div>
-        </div> 
+  <div class="map-container">
+      <div id="mapid"></div>
+  </div> 
 <!-- Div for information(left column) -->
-        <div class="location-info-section">
-          <h1 class="location-info-name">USA</h1>
-          <div class="location-info-stats">information here regarding stats</div>
-        </div>
+  <div class="location-info-section">
+    <h1 class="location-info-name">USA</h1>
+
+    <table>
+      <tr class="location-info-deployed">
+        <td class="location-deployed-result">#####</td>
+        <td>targeted posts deployed </td>
+        
+      </tr>
+    </table>  
+
+    <table>
+      <tr class="location-info-spent">
+        <td class = "with">with</td>
+        <td class="location-spent-result">#####</td>
+        <td class="paid"> RUB paid to facebook.</td>
+      </tr>
+    </table>  
+
+  </div>
    
 <!-- two lists of targets(left column) -->
-          <div class="target-groups-section">
-              <div class="target-description"></div>
-              <div class="target-column-left">
-                <li>anti-Muslim: 2342</li>
-                <li>White Nationalist: 2342</li>
-                <li>Black Power: 2342</li>
-                <li>Hispanic: 2342</li>
-                <li>LGBTQ: 2342</li>
-              </div>
+  <div class="target-groups-section">
+    <table></table>
+    <table class="target-column-left">
 
-              <div class="target-column-right">
-                <li>Muslim: 2342</li>
-                <li>Prisoners: 2342</li>
-                <li>Concervative Gun-Owners: 2342</li>
-                <li>Libertarians: 2342</li>
-                <li>Police Forces: 2342</li>
-              </div>
-          </div>
-        </div>
+      <tr class="white-pride">
+        <td>White Pride:</td>
+        <td class="result">52342</td>
+      </tr>
+        
+      <tr class="black-prise">
+        <td>Black Pride:</td>
+        <td class="result">72342</td>
+      </tr>
+
+      <tr class="anti-muslim">
+        <th>Anti-Muslims:</th>
+        <th class="result">2342</th>
+      </tr>
+
+      <tr class="hispanic">
+        <th>Hispanics:</th>
+        <th class="result">72342</th>
+      </tr>
+
+      <tr class="lgbtqs">
+        <th>LGBTQs:</th>
+        <th class="result">2342</th>
+      </tr>
+
+      <tr class="first-nations">
+        <th>First Nations:</th>
+        <th class="result">2342</th>
+      </tr>
+
+      <tr class="far-rights">
+        <th>Far-rights:</th>
+        <th class="result">2342</th>
+      </tr>
+   </table>
+
+   <table class="target-column-right">
+
+    <tr class="muslims">
+      <th>Muslims:</th>
+      <th class="result">4359875</th>
+    </tr>
+
+    <tr class="prisoners">
+      <td>Prisoners:</td>
+      <td class="result">52342</td>
+    </tr>
+   
+    <tr class="gun-owners">
+        <td>Gun-Owners:</td>
+        <td class="result">72342</td>
+    </tr>
+
+    <tr class="libertarians">
+      <td>Libertarians:</td>
+      <td class="result">72342</td>
+    </tr>
+
+    <tr class="police-officers">
+      <td>Police-offciers:</td>
+      <td class="result">2342</td>
+    </tr>
+
+    <tr class="veterans">
+      <td>Veterans:</td>
+      <td class="result">2342</td>
+    </tr>
+
+    <tr class="christans">
+      <td>Christians:</td>
+      <td class="result">2342</td>
+    </tr>
+  </table>       
+</div>
+
         <div class=left-column-footer>
         </div>
     </article>
 <!-- left column end) -->   
-
-
 <!-- right column start-->
-<section class="right-column">
+<div class="right-column">
+<nav class="filter-nav">
+  <ul class="advert-filter-div">
+  <!-- <li><a>Filter By:</a></li> -->
+  <li><a href="">Impressions</a></li>
+  <li><a href="">Cost</a></li>
+  <li style="float:right"><a class="active" href="">Random Sample</a></li>
+</ul>
+</nav>
 <!-- right column filter title-->
-  <div class="advert-filter-div">
-     <div class="advert-filter-title">filter:</div>
-     <div class="advert-filter-impressions">impressions</div>
-     <div class="advert-filter-ad_spend">money spend</div>
-  </div>
+  
   <div class="advert-container">
 <!-- singlecard -->
-          <div class="scene scene--card">
-            <div class="card">
-              <div class="card__face card__face--front"><img id="advert" src="https://hexagram.io/analysis/crop/P0001894-1.png" alt=""></div>
-              <div class="card__face card__face--back">back</div>
-            </div>
-          </div>
-          <p>Click card to flip.</p>		
+    <div class="scene scene--card">
+      <div class="card">
+        <div class="card__face card__face--front"><img id="advert" src="https://hexagram.io/analysis/crop/P0001894-1.png" alt=""></div>
+        <div class="card__face card__face--back">back</div>
+      </div>
+    </div>
+  <p>Click card to flip.</p>		
   </div>
-</section>
+</div>
 
   </article>
 
