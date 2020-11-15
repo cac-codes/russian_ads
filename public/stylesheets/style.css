@@ -64,13 +64,14 @@ height: 50rem;
 {
   background-color: #D53927 ;
   color: #CCCCCB ;
-  width: 60rem;
+  width: 80rem;
   display: grid;
   justify-content: center;
 }
 
 .map-container 
 {
+
   display: grid;
   justify-content: center;
   padding-bottom: 1rem;
@@ -147,6 +148,7 @@ height: 50rem;
 }
 
 
+
 .target-column-left, .target-column-right
 {
   list-style-type: none;
@@ -154,14 +156,14 @@ height: 50rem;
   font-family: 'Nunito', sans-serif;
   text-align: left;
   font-size: 1.5rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .result 
 {
-  text-align: right;
+  text-align: left;
   color: #232320;
 }
 
