@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const axios = require('axios')
-
 const {adsWithState} = require("./adsWithState.js")
 const {allAdsWithState} = require("./allAdsWithState.js")
 const {allAdsUSA} = require("./allAdsUSA.js")
@@ -69,6 +68,9 @@ app.get('/api/ads/:state/:profile', (req, res) => {
     res.send(adsByProfile(profile).flat())
 })
 
+
+
+
 app.get('/api/ads/:state', (req, res) => {
     var array = []
 
@@ -80,9 +82,60 @@ app.get('/api/ads/:state', (req, res) => {
         }
     }
 
+
     res.send(array.flat())
 
 })
+
+app.get('/api/ads/totals/:state', (req, res) => {
+
+    // let totals = Object.entries(adTotals).forEach([key, value], index) => {
+    //     for (let j = 0; j < totals.length; i++){
+    //         totalImpressions += impressions
+    //     }
+    //     console.log(totals)
+    // })
+    var totalImpressions = 0
+
+    // for (const [index, [key, value]] of Object.entries(Object.entries(adTotals))) {
+    //     console.log(`${index}: ${key} = ${value}`)
+    // }
+
+//  Object.entries(adTotals).forEach(ad => {
+//         for (let j = 0; j < totals.length; j++){
+
+//             if (ad.impressions != null){
+//             totalImpressions += ad.impressions
+//             }
+//         }
+//         console.log(ad.impressions)
+//     })
+
+    // let totals = Object.entries(adTotals)
+    // console.log(totals)
+    // for(let j = 0; j < totals.length; j++) {
+    //     const isTotal = totals[i][0]
+    //     if (isTotal && isTotal.impressions != null){
+    //         totalImpressions += isTotal.impressions
+    //     }
+    // }
+
+
+    // for (let j = 0; j< totals.length; )j++){
+    //     const aState = totals[i][1].state
+    //     if (aState && aState === req.params.state) {
+
+    //     }
+    
+    // }
+//     res.send(totalImpressions)
+
+})
+
+
+
+
+
 
 app.get('/api/ads', (req, res) => {
     var allAds = [];
