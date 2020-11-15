@@ -181,31 +181,45 @@ tr
 .right-column 
 {
   background-color: #D53927;
-  display: grid;
   justify-content: center;
   }
 
+  .array-title
+  {
+    color: #F7BC87;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+    
+  } 
 
-.advert-filter-impressions
+
+  .demographic-title
+  {
+    color: #232320;
+    
+  } 
+  .filter-by 
+  {
+    padding-right: 1rem;
+    text-align: left;
+  }
+
+.advert-filter-div
 {
-  margin-top: 1rem;
-  margin-right: 1rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
   color: #F7BC87;
   font-family: 'Nunito', sans-serif;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.advert-filter-ad_spend {
-  margin-top: 1rem;
-  color: #F7BC87;
-  font-family: 'Nunito', sans-serif;
-  text-align: left;
-  font-size: 1.5rem;
-}
 
 .advert-container
 {
+  display: grid;
   grid-column-start: auto;
   justify-content: start;
   max-width: max-content;
