@@ -3,6 +3,7 @@ const app = express();
 const axios = require('axios')
 
 const {adsWithState} = require("./adsWithState.js")
+const {allAdsWithState} = require("./allAdsWithState.js")
 const targetGroups = require("./targetGroups.js")
 app.use(express.static('public'))
 
