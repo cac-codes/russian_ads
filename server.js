@@ -7,7 +7,7 @@ const {allAdsWithState} = require("./allAdsWithState.js")
 const targetGroups = require("./targetGroups.js")
 app.use(express.static('public'))
 
-app.get('/api/ads/:state/:profile', (req, res) => {
+app.get('/api/:profile', (req, res) => {
     
     let profile = '';
     if(req.params.profile == "blackPower"){
@@ -16,8 +16,8 @@ app.get('/api/ads/:state/:profile', (req, res) => {
         profile = targetGroups.antiMuslim
     }else if(req.params.profile == "whiteNationalist"){
         profile = targetGroups.whiteNationalist
-    }else if(req.params.profile == "Hispanic"){
-        profile = targetGroups.Hispanic
+    }else if(req.params.profile == "hispanic"){
+        profile = targetGroups.hispanic
     }else if(req.params.profile == "lgbtq"){
         profile = targetGroups.lgbtq
     }else if(req.params.profile == "muslim"){
@@ -33,37 +33,34 @@ app.get('/api/ads/:state/:profile', (req, res) => {
     }
 
     function adsByProfile(targetGroup){
-        var adsInState = [];
-        let data = Object.entries(adsWithState)
+        var ads = [];
+        let data = Object.entries(allAdsWithState)
         for (let i = 0; i < data.length; i++){
-            const isState = data[i][1].state
-            if (isState && isState === req.params.state) {
-                adsInState.push(data[i])
-            }
+                ads.push(data[i])
         }
-        var newArray = []
-        adsInState.forEach(ad => {
+        var targetedGroupAds = []
+        ads.forEach(ad => {
             if(ad[1].interests != null){
                 targetGroup.forEach(interest => {
                     if(ad[1].interests.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
+                        if(!targetedGroupAds.includes(ad)){
+                        targetedGroupAds.push(ad)}
                     }
 
                 })
             }
         })
-        adsInState.forEach(ad => {
+        ads.forEach(ad => {
             if(ad[1].interests_also_match != null){
                 targetGroup.forEach(interest => {
                     if(ad[1].interests_also_match.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
+                        if(!targetedGroupAds.includes(ad)){
+                        targetedGroupAds.push(ad)}
                     }
                 })
             }
         })
-        return newArray
+        return targetedGroupAds
     }
     res.send(adsByProfile(profile).flat())
 })
@@ -71,7 +68,7 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 app.get('/api/ads/:state', (req, res) => {
     var array = []
 
-    let data = Object.entries(adsWithState)
+    let data = Object.entries(allAdsWithState)
     for (let i = 0; i < data.length; i++){
         const isState = data[i][1].state
         if (isState && isState === req.params.state) {
@@ -85,13 +82,15 @@ app.get('/api/ads/:state', (req, res) => {
 
 app.get('/api/ads', (req, res) => {
     var allAds = [];
-    let data = Object.entries(adsWithState)
+    let data = Object.entries(allAdsWithState)
+    let data2 = Object.entries(adsWithState)
     for (let i = 0; i < data.length; i++){
             allAds.push(data[i])
     }
+    console.log(data.length)
+    console.log(data.length)
     res.send(allAds.flat())
 })
-
 
 app.listen(4567, () => {
     console.log('listening on port 4567')
