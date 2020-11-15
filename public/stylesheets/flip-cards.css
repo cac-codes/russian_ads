@@ -83,10 +83,13 @@ body
   line-height: 260px;
   color: #232320;
   text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  backface-visibility: hidden;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
+/* 
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  } */
 
 .card__face--front 
 {
@@ -111,5 +114,8 @@ background-image: url("https://www.transparenttextures.com/patterns/handmade-pap
 #advert:hover 
 {
   filter: none;
-    
+}
+
+.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+var mapboxAccessToken = "pk.eyJ1Ijoic3R1YXJ0bWFjayIsImEiOiJja2hlYWFiNXYwZGxqMnJudjVqdGZiY3VpIn0.4hD2d_CU4I-Fn54yapqHaQ";
+var map = L.map('mapid').setView([37.8, -96], 4);
+>>>>>>> intermediate array-display
 
 
 
@@ -5,10 +11,10 @@
 
 
 // for flip cards on main page
-var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
+// var card = document.querySelector('.card');
+// card.addEventListener( 'click', function() {
+//   card.classList.toggle('is-flipped');
+// });
 
 
 const infoTesting = {
@@ -72,6 +78,19 @@ const infoTesting = {
   }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+getAdvertRaw()
+
+
+
+info.addTo(map);
+>>>>>>> intermediate array-display
 
 var img =  infoTesting.data.cropped_image
 var location_test = infoTesting.data.location
