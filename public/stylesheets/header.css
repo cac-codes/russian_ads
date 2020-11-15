@@ -19,8 +19,8 @@ section
     height: 40vh;
     overflow: hidden;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 
     /* height: 100vh; */
 
@@ -41,37 +41,35 @@ section img
 section h2 
 {
     position: relative;
-    color: #F7BC87;
+    color: #96291d ;
     font-size: 1em;
     font-family: 'Nunito', sans-serif;
-    transform-origin: -350% 250%;
+    transform-origin: -200% 250%;
 }
 
-.subtitle
-{   
-    position: relative;
-    color: #F7BC87;
-    font-size: 1em;
+#subtext 
+{
+    color: #232320;
     font-family: 'Nunito', sans-serif;
-    transform-origin: -350% 250%;
+   margin-left: 4rem;
+   rotate: none;
 }
-
 
     
 .titlecard 
 {
     color: #F7BC87;
     font-family: 'Nunito', sans-serif;
-    font-size: 6rem;
-    transform: rotate(-90deg);
-    transform-origin: 10% 300%;
+    font-size: 2rem;
+    transform-origin: 14% 400%;
+    
 }
     
 #hand
 {
     position: absolute;
     width: 80%; height: auto; 
-    transform-origin: 60% -100%;
+    transform-origin: 30% -50%;
     transform: rotate(-30deg);
     background-color: transparent;
     object-fit: cover;
