@@ -6,15 +6,17 @@ path {
 }
 
 path.on {
-    fill: #232320 ;
+    fill: #520b0b ;
     -webkit-transition: fill 0.5s ease-out;
     -moz--transition: fill 0.5s ease-out;
     -o-transition: fill 0.5s ease-out;
     transition: fill 0.5s ease-out;
 }
 
+
+
 path.highlight-state {
-    fill: red;
+    fill: #232320 ;
 }
 
 path.faded-state {

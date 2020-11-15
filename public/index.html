@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/flip-cards.css">
     <link rel="stylesheet" href="stylesheets/svg-map-styles.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,15 +24,26 @@
 <body>
 
 <!-- header title and hand -->
-
-<header class="project-title-div"> 
-  <div class="titlecard">RUSSIAN</div>
-</header>
-  <div class="overlayed-hand">
-    <img src="img/hand_russia_hand.svg" 
-      data-speed="5" class="layer"
+<section>
+  <header class="project-title-div"> 
+      <div class="titlecard">
+        RUSSIAN 
+      </div>
+  </header>
+  
+      <img src="img/hand_russia_hand.svg" id = hand data-speed="5" class="layer" 
         />
-  </div>
+   
+    <h2 class= "layer" data-speed="1">
+      In 2017, the select committee<br>  released a report confirming Russian<br>  led psychological operations to fragment <br>Americans by sowing discord online <br>and interfere with democracy.</h2>
+    <!-- <h2 class= "layer" data-speed="-5">
+      Interests: Angela Davis</h2>
+    <h2 class= "layer" data-speed="5">
+      Field of Study: 	
+      Police officer</h2>
+    <h2 class= "layer" data-speed="2">
+      Interests: Guns & Ammo</h2> -->
+</section>
  
   
 <article class="main_container">  
@@ -97,7 +109,7 @@
     <path id="WY" fill="#D3D3D3" d="M354.3,143.8l-10.5-0.8l-32.1-3.3l-16.2-2.1l-28.3-4.1l-19.9-3l-1.4,11.2l-3.8,24.3l-5.3,30.4 l-1.5,10.5l-1.7,11.9l6.5,0.9l25.9,2.5l20.6,2.3l36.8,4.1l23.8,2.9l4.5-44.2l1.4-25.4L354.3,143.8z"/>
     <circle id="DC" fill="#D3D3D3" stroke="#FFFFFF" stroke-width="1.5" cx="801.3" cy="251.8" r="5"/>
   </g>
-  <path id="frames" fill="none" stroke="#A9A9A9" stroke-width="2" d="M215,493v55l36,45 M0,425h147l68,68h85l54,54v46"/>
+  <path id="frames" fill="none" stroke="#F7BC87" stroke-width="2" d="M215,493v55l36,45 M0,425h147l68,68h85l54,54v46"/>
 </svg> -->
 <!-- Div for information(left column) -->
   <div class="location-info-section">
@@ -230,6 +242,7 @@
 </div>
 
   </article>
+  <script src="javascript/header.js"></script>
     <script src="javascript/svg-map.js"></script>
     <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
     <script src="javascript/coordinates.js"></script>
