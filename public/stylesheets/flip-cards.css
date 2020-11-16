@@ -98,3 +98,8 @@ background-image: url("https://www.transparenttextures.com/patterns/handmade-pap
 {
   filter: none;
 }
+
+.back-card-info {
+  height:30%; 
+  width: 100%;
+}
