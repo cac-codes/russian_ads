@@ -258,14 +258,8 @@ app.get('/api/totals/:state', (req, res) => {
     totalForState(oneState)
 
     
-<<<<<<< HEAD
     let result = totalForState(oneState)
     res.send(result)
-=======
-    res.send(totalForState(oneState))
-
-
->>>>>>> sum count done
 })
 
 // endpoint maybe not reachable because of earlier endpoint using same route
