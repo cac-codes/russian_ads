@@ -61,15 +61,15 @@ section h2
     color: #F7BC87;
     font-family: 'Nunito', sans-serif;
     font-size: 2rem;
-    transform-origin: 14% 400%;
+    transform-origin: 15% 400%;
     
 }
     
 #hand
 {
     position: absolute;
-    width: 80%; height: auto; 
-    transform-origin: 30% -50%;
+    width: 60%; height: auto; 
+    transform-origin: 40% -160%;
     transform: rotate(-30deg);
     background-color: transparent;
     object-fit: cover;
