@@ -7,10 +7,10 @@
 
 function displayAdverts(response) {
 
-  for (var i = 0; i < 10; i++) {
-    var number = Math.floor(Math.random()*20)
+  for (var i = 0; i < 2; i++) {
+    var number = Math.floor(Math.random()*3476)
     while (number%2 == 0) {
-      number = Math.floor(Math.random()*20)
+      number = Math.floor(Math.random()*3476)
     }
    
     if (number%2 ==!0 && response.data[number].image != null) {
