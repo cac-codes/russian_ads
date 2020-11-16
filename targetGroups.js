@@ -1,6 +1,6 @@
 const blackPowerInterests = [
     "African American",
-    "Anglicanism"
+    "Anglicanism",
     "African American Museum in Philadelphia",
     "African Methodist Episcopal Church",
     "African Methodist Episcopal Zion Church",
@@ -48,7 +48,8 @@ const blackPowerCulturalAfinity = [
 ];
 
 ///this is black gun lovers///
-const blackPowerExclude =[Black guns matter,]
+const blackPowerExclude =[
+    "Black guns matter",]
 
 const antiMuslim = [
     "Deportation",
@@ -69,7 +70,7 @@ const whiteNationalistInterests = [
     "Proud to be an American",
     "Patriot Nation",
     "American Patriot",
-    "America the Beautiful"
+    "America the Beautiful",
     "American patriotism",
     "Confederate Flag",
     "Confederate States Army",
@@ -133,7 +134,7 @@ const leftWingInterests = [
 "Anti-racism",
 "Anti-war movement",
 "Social justice",
-"Filming Cops"
+"Filming Cops",
 "Bernie Sanders",
 "Liberalism",
 ]
@@ -250,12 +251,12 @@ const rightWingInterests = [
     "Mike Huckabee",
     "Jesus",
     "TheBlaze",
-    "Donald Trump Jr."
+    "Donald Trump Jr.",
     "Texas Nationalist Movement",
 "Hog Hunting Texas Style",
 "Texas Secession",
 "Texas Hog Hunting",
-"Don't Mess with Texas,
+"Don't Mess with Texas",
 "Texas Gun Owner",
 "Texas Deer Association",
 "Texas Parks and Wildlife - Hunt",
@@ -267,7 +268,7 @@ const rightWingInterests = [
 "Texas Deer Hunting",
 "Texas Born Texas Proud",
 "Daughters of the Republic of Texas",
-"The Texas Huntress,"
+"The Texas Huntress",
 "Texas Got It Right",
 "Texas Values",
 "Open Carry Texas",
