@@ -14,15 +14,19 @@ function hoverHighlight(el) {
     el.classList.add("on");
 }
 
-// fade rest of states when state is clicked
+// fade rest of states and highlight state when state is clicked
 function fadeStates(el) {
-    svgStates.forEach((el => {
-        el.classList.remove("highlight-state");
-        el.classList.add("faded-state");
-    }))
-
-    el.classList.remove("faded-state");
-    el.classList.add("highlight-state");
+    if (el.classList.contains("highlight-state")) {
+        el.classList.remove("highlight-state")
+    } else {
+        svgStates.forEach((el => {
+            el.classList.remove("highlight-state");
+            el.classList.add("faded-state");
+        }))
+    
+        el.classList.remove("faded-state");
+        el.classList.add("highlight-state");
+    }
 }
 
 // add event listeners to state elements
