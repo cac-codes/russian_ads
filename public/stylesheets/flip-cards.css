@@ -3,7 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/* filter adver navbar  */
+/* filter advertisments navbar  */
 .filter-nav
 {
   color: #F7BC87;
@@ -29,7 +29,7 @@ li a
   padding: 1rem 1rem;
   text-decoration: none;
 }
-  /* Change the link color to #111 (black) on hover */
+  /* Change the link color on hover */
 li a:hover 
 {
   background-color: #520b0b;
@@ -78,10 +78,10 @@ body
   font-size: 1rem;
   backface-visibility: hidden;
 }
-.card__face--front 
+/* .card__face--front 
 {
   background-image: "https://hexagram.io/analysis/crop/P0001894-1.png" ;
-}
+} */
 .card__face--back 
 {
   background-color: #f7bc87;
