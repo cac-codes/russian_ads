@@ -44,72 +44,70 @@ body
  font-family: 'Nunito', sans-serif;
  font-size: 1rem;
 }
-.scene 
-{
-  width: 25rem;
-  height: 25rem;
+.scene {
+  width: 300px;
+  height: 400px;
   margin: 40px 0;
   perspective: 600px;
-  background-color: #D53927;
+  padding: .5rem;
 }
-.card 
-{
-  position: relative;
-  width: 70%;
-  height: 70vh;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
+.card {
+  width: 100%;
+  height: 100%;
   transition: transform .5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  filter: grayscale(100%) contrast(160%) sepia(.60) ;
 }
-.card.is-flipped 
+.card:hover 
 {
-  transform: translateX(-100%) rotateY(-180deg);
+  filter: none;
 }
-.card__face 
-{
+.card.is-flipped {
+  transform: rotateY(-180deg);
+}
+.card__face {
   position: absolute;
   width: 100%;
   height: 100%;
   line-height: 260px;
-  color: #232320;
+  color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* .card__face--front 
-{
-  background-image: "https://hexagram.io/analysis/crop/P0001894-1.png" ;
-} */
-.card__face--back 
-{
-  background-color: #f7bc87;
-background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-  transform: rotateY(180deg);
+.card__face--front {
+  background: #92271b;
 }
-.advert 
-{
-  
-  max-height: 100%;
-  filter: grayscale(100%) contrast(200%) sepia(.60) ;
+.card__face--back {
+  background: #f7bc87;
+  transform: rotateY(-180deg);
 }
-.advert:hover 
-{
-  filter: none;
-}
-
 .back-card-info {
-  height:10%; 
-  width: 100%;
+  height: 5px;
   font-size: 1rem ;
+  text-align: left;
+  margin: 1rem;
+  word-wrap: break-word;
 }
-
 .card-scroll {
   overflow-y: scroll;
+  overflow-x: none;
   height: 1000px;
 }
-
+.card-scroll::-webkit-scrollbar {
+  width: 1em;
+}
+.card-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.card-scroll::-webkit-scrollbar-thumb {
+  background-color:  #f7bc87;
+  outline: 1px solid slategrey;
+}
 .hidden {
   visibility: hidden;
 }

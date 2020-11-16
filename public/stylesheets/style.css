@@ -237,7 +237,7 @@ tr
 .advert-container
 {
   display: grid;
-  grid-column-start: auto;
+  /* grid-column-start: auto; */
   justify-content: start;
   max-width: max-content;
   padding-right: 2rem;
