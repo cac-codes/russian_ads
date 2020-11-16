@@ -24,6 +24,10 @@ let policeData = document.querySelector(".police-result");
 let veteransData = document.querySelector(".veterans-result");
 let christiansData = document.querySelector(".christians-result");
 
+// demographics table categories
+let demographicList = document.querySelectorAll(".demographic")
+let demographicTarget = document.querySelector("td.demographic-result")
+
 
 function adsByTarget(state) {
     axios.get(`/api/ads/${state}/whiteNationalist`).then(res => {
@@ -76,13 +80,16 @@ function hoverHighlight(el) {
 
     mapHeader.textContent = el.getAttribute("data-state")
     let state = el.getAttribute("data-state");
-    adsByTarget(state);
+    // adsByTarget(state);
 }
 
 // fade rest of states and highlight state when state is clicked
 function fadeStates(el) {
     if (el.classList.contains("highlight-state")) {
         el.classList.remove("highlight-state")
+        svgStates.forEach((el => {
+            el.classList.remove("faded-state");
+        }))
     } else {
         svgStates.forEach((el => {
             el.classList.remove("highlight-state");
@@ -133,3 +140,10 @@ svgMap.addEventListener("mouseleave", () => {
     resetAdsByTarget();
 })
 
+// click listener on 
+demographicList.forEach((el) => {
+    el.addEventListener("click", () => {
+
+        demographicTarget.textContent = `${el.textContent.slice(0, -1)}`
+    })
+})
