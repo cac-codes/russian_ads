@@ -128,7 +128,7 @@ app.get('/api/:profile', (req, res) => {
 
 
 app.get('/api/ads/:state/:profile', (req, res) => {
-    
+ 
     let interests = '';
     let likes = '';
     let culturalAfinity = '';
@@ -220,38 +220,47 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 })
 
 
+
 function totalForState(oneState){
     
     var thisState = Object.entries(allAdsWithState)
-    var spendingTotal = 0
-    var impressionTotal = 0
+    var spendingTotal = {"total_spent": 0 }
+    var impressionTotal = {"impression_total": 0}
+    var adCounter = {"ad_count": 0}
+
+
+
     var testSpendArray = []
     thisState.forEach((element, index, array) => {
  
-
         const isState = element[1].state
-
+        const isID = element[0]
         if (isState && isState === oneState) {
             const stateSpend = element[1].ad_spend
             const stateImpression = element[1].impressions
             if (stateSpend && stateSpend > 0){
-            spendingTotal += stateSpend
+                spendingTotal['total_spent'] = Math.floor(spendingTotal.total_spent += stateSpend)
+            }if (isID){
+                let counter = 0
+                counter ++; 
+                adCounter.ad_count += counter 
             }
-            impressionTotal += stateImpression
-        }   
-        
-    })
+            impressionTotal.impression_total += stateImpression
+        }
+
+    })  
 
 
-    return new Array(spendingTotal, impressionTotal)
+    return new Array(spendingTotal, impressionTotal, adCounter)
 }
 
 app.get('/api/totals/:state', (req, res) => {
 
     var oneState = req.params.state
-    console.log("Test")
+
   
     totalForState(oneState)
+
     
     res.send(totalForState(oneState))
 })
