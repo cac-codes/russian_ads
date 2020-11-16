@@ -26,13 +26,17 @@ li a
   display: block;
   color:  #F7BC87;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   text-decoration: none;
 }
   /* Change the link color to #111 (black) on hover */
 li a:hover 
 {
-  background-color: #232320;
+  background-color: #520b0b;
+  -webkit-transition: background-color 0.5s ease-out;
+    -moz--transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 body
 {  
