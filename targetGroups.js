@@ -377,7 +377,7 @@ const policeForceJobtitle = [
 "Rear Admiral"
 
 ];
-const policeInterests = [
+const PoliceInterests = [
 "Police",
 "Law Enforcement Today",
 "Fallen Police Officers",
@@ -400,6 +400,7 @@ const firstNationInterests = [
     "Cherokee language",
     "Cherokee Nation"
 ];
+
 
 module.exports = {
     blackPowerInterests,
