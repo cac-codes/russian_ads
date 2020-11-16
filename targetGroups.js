@@ -32,16 +32,18 @@ const blackPowerInterests = [
     "Martin Luther King, Jr.",
     "Huey P. Newton",
     "Black Power",
-"Fight the Power",
-"Black history",
-"My Black is Beautiful",
-"Black History Month",
-"Black is beautiful",
-"Black Girls Rock!"
+    "Fight the Power",
+    "Black history",
+    "My Black is Beautiful",
+    "Black History Month",
+    "Black is beautiful",
+    "Black Girls Rock!",
     
 ];  
 
-const blackPowerLikes = [ "Don't Shoot"];
+const blackPowerLikes = [ 
+    "Don't Shoot"
+];
 
 const blackPowerCulturalAfinity = [
     "African American (US)"
@@ -49,14 +51,15 @@ const blackPowerCulturalAfinity = [
 
 ///this is black gun lovers///
 const blackPowerExclude =[
-    "Black guns matter",]
+    "Black guns matter"
+]
 
-const antiMuslim = [
+const antiMuslimInterests = [
     "Deportation",
-"Stop Illegal Immigration",
-"Immigration law",
-"Supporting Our Veterans",
-"Illegal immigration",
+    "Stop Illegal Immigration",
+    "Immigration law",
+    "Supporting Our Veterans",
+    "Illegal immigration",
 ];
 
 const antiMuslimLikes = [
@@ -80,11 +83,10 @@ const whiteNationalistInterests = [
     "American Civil War",
     "South United",
     "Flags of the Confederate States of America",
-"Hart of Dixie",
-"Mud & Trucks",
-"Dixie",
-"Confederate States of America",
-
+    "Hart of Dixie",
+    "Mud & Trucks",
+    "Dixie",
+    "Confederate States of America",
 ];
 const HispanicInterests = [
     "Hispanic and latino american culture",
@@ -102,7 +104,6 @@ const HispanicInterests = [
     "La Raza"
 ];
 const lgbtqInterests = [
-
     "Gay pride", 
     "LGBT community", 
     "Homosexuality", 
@@ -127,32 +128,29 @@ const leftWingLikes = [
 
 const leftWingInterests = [
     "Anarchism",
-"Anarcho-capitalism",
-"Anonymous (group)",
-"Anti-Racist Action",
-"Anti-discrimination",
-"Anti-fascism",
-"Anti-racism",
-"Anti-war movement",
-"Social justice",
-"Filming Cops",
-"Bernie Sanders",
-"Liberalism",
+    "Anarcho-capitalism",
+    "Anonymous (group)",
+    "Anti-Racist Action",
+    "Anti-discrimination",
+    "Anti-fascism",
+    "Anti-racism",
+    "Anti-war movement",
+    "Social justice",
+    "Filming Cops",
+    "Bernie Sanders",
+    "Liberalism",
 ]
 
-const Veterans = [
-
+const veteransInterests = [
     "Iraq and Afghanistan Veterans of America",
-"Vietnam Veterans of America Foundation",
-"Veterans For America",
-"Support our troops",
-"US Military Veterans",
-"Vietnam Veterans of America",
-"Support Our Veterans",
-"Concerned Veterans for America",
-"Supporting Our Veterans",
-
-
+    "Vietnam Veterans of America Foundation",
+    "Veterans For America",
+    "Support our troops",
+    "US Military Veterans",
+    "Vietnam Veterans of America",
+    "Support Our Veterans",
+    "Concerned Veterans for America",
+    "Supporting Our Veterans",
 ]
 const muslimInterests = [
     "Islam",
@@ -277,9 +275,7 @@ const rightWingInterests = [
 "Keep Texas Working",
 ];
 
-
-
-const christianinterests = [
+const christianInterests = [
     "Martin Luther King, Jr.",
 "God",
 "Christian Church",
@@ -301,19 +297,17 @@ const christianinterests = [
 "Jesus"
 ];
 
-
 const prisonersInterests = [
-
     "Prison-industrial complex",
-"Corrections Corporation of America",
-"American Correctional Association",
-"Incarceration in the United States",
-"The Inmates",
-"Children Of Inmates",
-"Prison Wives",
-"School-to-prison pipeline",
+    "Corrections Corporation of America",
+    "American Correctional Association",
+    "Incarceration in the United States",
+    "The Inmates",
+    "Children Of Inmates",
+    "Prison Wives",
+    "School-to-prison pipeline",
 ];
-const GunOwnersInterests = [
+const gunOwnersInterests = [
     
     "Protect the Second Amendment",
     "Preserve our right to keep and bear arms",
@@ -351,69 +345,79 @@ const libertariansInterests = [
     "Anarcho-capitalism"
 ];
 
-
 ///need job to find police force///
 
 const policeForceJobtitle = [
 
     "Polisi militer",
-"Soldado",
-"Retired Police Officer",
-"Officer",
-"Colonel",
-"Major general (United States)",
-"Master sergeant",
-"Chief of police",
-"Commander (United States)",
-"Sergeant",
-"Police commissioner",
-"Brigadier general",
-"Petty officer",
-"Officer cadet",
-"Sergeant Major of the Army",
-"Lieutenant colonel (United States)",
-"Chief petty officer",
-"Lieutenant commander",
-"Squadron leader",
-"911 Dispatcher",
-"Rear Admiral"
+    "Soldado",
+    "Retired Police Officer",
+    "Officer",
+    "Colonel",
+    "Major general (United States)",
+    "Master sergeant",
+    "Chief of police",
+    "Commander (United States)",
+    "Sergeant",
+    "Police commissioner",
+    "Brigadier general",
+    "Petty officer",
+    "Officer cadet",
+    "Sergeant Major of the Army",
+    "Lieutenant colonel (United States)",
+    "Chief petty officer",
+    "Lieutenant commander",
+    "Squadron leader",
+    "911 Dispatcher",
+    "Rear Admiral"
 
 ];
-constantPoliceInterests = [
+const antPoliceInterests = [
     "Police",
-"Law Enforcement Today",
-"Fallen Police Officers",
-"Wives Behind the Badge, Inc.",
-"The Thin Blue Line",
-"PoliceOne.com",
-"Officer Down Memorial Page",
-"National Law Enforcement Officers Memorial",
-"Respect the Thin Blue line.",
-"The Thin Blue Line (emblem)",
-"Police Wives Unite",
-"Police officer",
-"National Police Wives Association",
-"Heroes Behind The Badge"
+    "Law Enforcement Today",
+    "Fallen Police Officers",
+    "Wives Behind the Badge, Inc.",
+    "The Thin Blue Line",
+    "PoliceOne.com",
+    "Officer Down Memorial Page",
+    "National Law Enforcement Officers Memorial",
+    "Respect the Thin Blue line.",
+    "The Thin Blue Line (emblem)",
+    "Police Wives Unite",
+    "Police officer",
+    "National Police Wives Association",
+    "Heroes Behind The Badge"
 ];
 
 
 
 const firstNationInterests = [
-    "American Indian Movement",
-"Native American Indian Wisdom",
-"Cherokee language",
-"Cherokee Nation"
+        "American Indian Movement",
+    "Native American Indian Wisdom",
+    "Cherokee language",
+    "Cherokee Nation"
 ];
 
 module.exports = {
-    blackPower,
-    antiMuslim,
-    whiteNationalist,
-    hispanic,
-    lgbtq,
-    muslim,
-    prisoners,
-    GunOwners,
-    libertarians,
-    policeForce
+    blackPowerInterests,
+    blackPowerLikes,
+    blackPowerCulturalAfinity,
+    blackPowerExclude,
+    antiMuslimInterests,
+    antiMuslimLikes,
+    whiteNationalistInterests,
+    HispanicInterests,
+    lgbtqInterests,
+    leftWingLikes,
+    leftWingInterests,
+    veteransInterests,
+    muslimInterests,
+    rightWingInterests,
+    christianInterests,
+    prisonersInterests,
+    gunOwnersInterests,
+    libertariansInterests,
+    policeForceJobtitle,
+    antPoliceInterests,
+    firstNationInterests
 }   

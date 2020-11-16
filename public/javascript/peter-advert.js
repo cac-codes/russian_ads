@@ -7,20 +7,25 @@
 
 function displayAdverts(response) {
 
-  for (var i = 0; i < 2; i++) {
-    var number = Math.floor(Math.random()*3476)
+
+  for (var i = 0; i < 100; i++) {
+    var number = Math.floor(Math.random()*20)
+
     while (number%2 == 0) {
       number = Math.floor(Math.random()*3476)
     }
    
     if (number%2 ==!0 && response.data[number].image != null) {
       
-      
+      console.log(response.data[number].interests)
       //to grab ad_spend, ad_spend:, ad_spend_currency:, interests:, interests_also_match:, impressions
-
-     
       let adSpend = response.data[number].ad_spend
       let impressions = response.data[number].impressions
+      let currency = response.data[number].ad_spend_currency
+      if (currency == "USD") {
+        adSpend = adSpend * 77
+      }
+      
       
       
 
@@ -51,7 +56,7 @@ function displayAdverts(response) {
       adContainer4.classList.add("card__face--back")
       adSpendBox = document.createElement("div")
       adSpendBox.classList.add("back-card-info")
-      adSpendBox.textContent = `Dollars Spent: ${Math.round(adSpend)}`
+      adSpendBox.textContent = `Rubles Spent: ${Math.round(adSpend)}`
       adContainer4.appendChild(adSpendBox)
       impressionsBox = document.createElement("div")
       impressionsBox.classList.add("back-card-info")

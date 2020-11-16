@@ -4,12 +4,14 @@ var blackPrideLink = document.querySelector('.black-pride .demographic a')
 
 function displayAd(res) {
     for(let index = 0; index < res.data.length; index++){
-        if (index%2 != 0 && res.data[index].image != null) {
+        // console.log(res.data[index][1].image)
+        if (index%2 != 0 && res.data[index][1].image != null) {
             
-            let adSpend = res.data[index].ad_spend
-            let impressions = res.data[index].impressions
-            
-            img_url = res.data[index].image
+            let adSpend = res.data[index][1].ad_spend
+            let impressions = res.data[index][1].impressions
+            console.log(adSpend)
+            console.log(impressions)
+            img_url = res.data[index][1].image
             let img = document.createElement("img")
             
             img.src = img_url
@@ -59,7 +61,7 @@ whitePrideLink.addEventListener('click', (event) => {
     event.preventDefault()
     advertContainerGreatGrandad.innerHTML = "";
 
-    axios.get('/api/whiteNationalist').then(res => {
+    axios.get('/api/whitePride').then(res => {
         displayAd(res)
     })
 })
@@ -68,7 +70,38 @@ blackPrideLink.addEventListener('click', (event) => {
     event.preventDefault()
     advertContainerGreatGrandad.innerHTML = "";
 
-    axios.get('/api/blackPower').then(res => {
+    axios.get('/api/blackPride').then(res => {
         displayAd(res)
     })
 })
+if(req.params.profile == "blackPride"){
+    interests =  targetGroups.blackPowerInterests
+    likes = targetGroups.blackPowerLikes
+    culturalAfinity = targetGroups.blackPowerCulturalAfinity
+}else if(req.params.profile == "antiMuslim"){
+    interests = targetGroups.antiMuslimInterests
+    likes = targetGroups.antiMuslimLikes
+}else if(req.params.profile == "whitePride"){
+    interests = targetGroups.whiteNationalistInterests
+}else if(req.params.profile == "hispanics"){
+    interests = targetGroups.HispanicInterests
+}else if(req.params.profile == "lgbtq"){
+    interests = targetGroups.lgbtqInterests
+}else if(req.params.profile == "muslims"){
+    interests = targetGroups.muslimInterests
+}else if(req.params.profile == "incarcerated"){
+    interests = targetGroups.prisonersInterests
+}else if(req.params.profile == "gunOwners"){
+    interests = targetGroups.gunOwnersInterests
+}else if(req.params.profile == "libertarians"){
+    interests = targetGroups.libertariansInterests
+}
+// else if(req.params.profile == "policeOfficers"){
+//     profile = targetGroups.policeForce
+// }
+"veterans"
+"leftWing"
+
+"rightWing"
+"christians"
+"firstNations"
