@@ -12,7 +12,7 @@ app.use(express.static('public'))
 
 app.get('/api/ads/:state', (req, res) => {
     var array = []
-
+    var totalsArray = []
     let data = Object.entries(allAdsWithState)
     for (let i = 0; i < data.length; i++){
         const isState = data[i][1].state
@@ -274,6 +274,7 @@ app.get('/api/ads/:state', (req, res) => {
         }
     }
 
+ 
 
     res.send(array.flat())
 
