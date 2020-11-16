@@ -2,19 +2,17 @@ var fs = require("fs")
 
 fs.readFile("data.json", function (error, content){
     
-    var allAdsWithState = {}
+    var allAdsUSA = {}
 
     var stateData = JSON.parse(content)
-   
-    var counter = 0
 
     stateData.data.forEach( ad => {
+        // console.log(ad.location)
+        // console.log(ad.location_living)
         if(ad.location_living != null){
-            if(ad.location_living[0].state != undefined){
-            // console.log(ad.location_living)
-            counter++;
+            if(ad.location_living[0].country != undefined){
             var id = ad.ad_id
-            allAdsWithState[id] = 
+            allAdsUSA[id] = 
             {
                 state: ad.location_living[0].state,
                 city: ad.location_living[0].city,
@@ -24,13 +22,13 @@ fs.readFile("data.json", function (error, content){
                 interests: ad.interests,
                 interests_also_match: ad.interests_also_match
             }
-            console.log(ad.location_living[0].state)
-            }
+            // console.log(ad.location_living[0].state)
+            } 
         } else if(ad.location != null){
-            if(ad.location[0].state != undefined){
-            console.log(ad.location[0].state)
+            if(ad.location[0].country != undefined){
+            // console.log(ad.location[0].state)
             var id = ad.ad_id
-            allAdsWithState[id] = 
+            allAdsUSA[id] = 
             {
                 state: ad.location[0].state,
                 city: ad.location[0].city,
@@ -39,10 +37,10 @@ fs.readFile("data.json", function (error, content){
                 impressions: ad.impressions,
                 interests: ad.interests,
                 interests_also_match: ad.interests_also_match
-            }
-        }}
+            } 
+        }} 
 
     });
-    console.log(allAdsWithState)
-    fs.writeFileSync("allAdsWithState.js", JSON.stringify(allAdsWithState))
+    // console.log(allAdsUSA)
+    fs.writeFileSync("allAdsUSA.js", JSON.stringify(allAdsUSA))
 })

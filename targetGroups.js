@@ -102,6 +102,7 @@ const HispanicInterests = [
     "La Raza"
 ];
 const lgbtqInterests = [
+
     "Gay pride", 
     "LGBT community", 
     "Homosexuality", 
@@ -408,7 +409,7 @@ module.exports = {
     blackPower,
     antiMuslim,
     whiteNationalist,
-    Hispanic,
+    hispanic,
     lgbtq,
     muslim,
     prisoners,

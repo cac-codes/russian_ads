@@ -4,6 +4,7 @@ const axios = require('axios')
 
 const {adsWithState} = require("./adsWithState.js")
 const {allAdsWithState} = require("./allAdsWithState.js")
+const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
 app.use(express.static('public'))
 
@@ -34,7 +35,7 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 
     function adsByProfile(targetGroup){
         var adsInState = [];
-        let data = Object.entries(adsWithState)
+        let data = Object.entries(allAdsWithState)
         for (let i = 0; i < data.length; i++){
             const isState = data[i][1].state
             if (isState && isState === req.params.state) {
@@ -71,7 +72,7 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 app.get('/api/ads/:state', (req, res) => {
     var array = []
 
-    let data = Object.entries(adsWithState)
+    let data = Object.entries(allAdsWithState)
     for (let i = 0; i < data.length; i++){
         const isState = data[i][1].state
         if (isState && isState === req.params.state) {
@@ -85,13 +86,13 @@ app.get('/api/ads/:state', (req, res) => {
 
 app.get('/api/ads', (req, res) => {
     var allAds = [];
-    let data = Object.entries(adsWithState)
+    let data = Object.entries(allAdsUSA)
     for (let i = 0; i < data.length; i++){
             allAds.push(data[i])
     }
+    console.log(data.length)
     res.send(allAds.flat())
 })
-
 
 app.listen(4567, () => {
     console.log('listening on port 4567')
