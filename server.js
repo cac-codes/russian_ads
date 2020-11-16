@@ -262,9 +262,11 @@ app.get('/api/totals/:state', (req, res) => {
     totalForState(oneState)
 
     
-    res.send(totalForState(oneState))
+    let result = totalForState(oneState)
+    res.send(result)
 })
 
+// endpoint maybe not reachable because of earlier endpoint using same route
 app.get('/api/ads/:state', (req, res) => {
     var array = []
 
