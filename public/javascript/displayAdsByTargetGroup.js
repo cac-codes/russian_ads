@@ -16,25 +16,23 @@ var policeOfficers = document.querySelector('.police-officers .demographic a')
 
 function displayAd(res) {
     for(let index = 0; index < res.data.length; index++){
-        // console.log(res.data[index][1].image)
         if (index%2 != 0 && res.data[index][1].image != null) {
             
             let adSpend = res.data[index][1].ad_spend
             let impressions = res.data[index][1].impressions
-            console.log(adSpend)
-            console.log(impressions)
             img_url = res.data[index][1].image
             let img = document.createElement("img")
             
             img.src = img_url
             img.classList.add("advert")
-            
-            
+        
             numberstring = index.toString()
             
             adContainer1 = document.createElement("div")
             adContainer1.classList.add("scene") 
             adContainer1.classList.add("scene--card")
+            adContainer1.dataset.impressions = res.data[index][1].impressions
+            adContainer1.dataset.spend = res.data[index][1].ad_spend
             adContainer2 = document.createElement("div")
             adContainer2.classList.add("card")
             
