@@ -7,6 +7,7 @@ const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
 const {adTotals} = require("./totals.js");
 const { test } = require('picomatch');
+const { adsForMurica } = require('./data.json')
 app.use(express.static('public'))
 
 
@@ -93,92 +94,112 @@ app.get('/api/:profile', (req, res) => {
 })
 
 
-app.get('/api/ads/:state/:profile', (req, res) => {
+// app.get('/api/ads/:state/:profile', (req, res) => {
     
-    let profile = '';
-    if(req.params.profile == "blackPower"){
-        profile =  targetGroups.blackPower
-    }else if(req.params.profile == "antiMuslim"){
-        profile = targetGroups.antiMuslim
-    }else if(req.params.profile == "whiteNationalist"){
-        profile = targetGroups.whiteNationalist
-    }else if(req.params.profile == "Hispanic"){
-        profile = targetGroups.Hispanic
-    }else if(req.params.profile == "lgbtq"){
-        profile = targetGroups.lgbtq
-    }else if(req.params.profile == "muslim"){
-        profile = targetGroups.muslim
-    }else if(req.params.profile == "prisoners"){
-        profile = targetGroups.prisoners
-    }else if(req.params.profile == "concervativeGunOwners"){
-        profile = targetGroups.concervativeGunOwners
-    }else if(req.params.profile == "libertarians"){
-        profile = targetGroups.libertarians
-    }else if(req.params.profile == "policeForce"){
-        profile = targetGroups.policeForce
-    }
+//     let profile = '';
+//     if(req.params.profile == "blackPower"){
+//         profile =  targetGroups.blackPower
+//     }else if(req.params.profile == "antiMuslim"){
+//         profile = targetGroups.antiMuslim
+//     }else if(req.params.profile == "whiteNationalist"){
+//         profile = targetGroups.whiteNationalist
+//     }else if(req.params.profile == "Hispanic"){
+//         profile = targetGroups.Hispanic
+//     }else if(req.params.profile == "lgbtq"){
+//         profile = targetGroups.lgbtq
+//     }else if(req.params.profile == "muslim"){
+//         profile = targetGroups.muslim
+//     }else if(req.params.profile == "prisoners"){
+//         profile = targetGroups.prisoners
+//     }else if(req.params.profile == "concervativeGunOwners"){
+//         profile = targetGroups.concervativeGunOwners
+//     }else if(req.params.profile == "libertarians"){
+//         profile = targetGroups.libertarians
+//     }else if(req.params.profile == "policeForce"){
+//         profile = targetGroups.policeForce
+//     }
 
-    function adsByProfile(targetGroup){
-        var adsInState = [];
-        let data = Object.entries(allAdsWithState)
-        for (let i = 0; i < data.length; i++){
-            const isState = data[i][1].state
-            if (isState && isState === req.params.state) {
-                adsInState.push(data[i])
-            }
-        }
-        var newArray = []
-        adsInState.forEach(ad => {
-            if(ad[1].interests != null){
-                targetGroup.forEach(interest => {
-                    if(ad[1].interests.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
+//     function adsByProfile(targetGroup){
+//         var adsInState = [];
+//         let data = Object.entries(allAdsWithState)
+//         for (let i = 0; i < data.length; i++){
+//             const isState = data[i][1].state
+//             if (isState && isState === req.params.state) {
+//                 adsInState.push(data[i])
+//             }
+//         }
+//         var newArray = []
+//         adsInState.forEach(ad => {
+//             if(ad[1].interests != null){
+//                 targetGroup.forEach(interest => {
+//                     if(ad[1].interests.includes(interest)){
+//                         if(!newArray.includes(ad)){
+//                         newArray.push(ad)}
+//                     }
 
-                })
-            }
-        })
-        adsInState.forEach(ad => {
-            if(ad[1].interests_also_match != null){
-                targetGroup.forEach(interest => {
-                    if(ad[1].interests_also_match.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
-                })
-            }
-        })
-        return newArray
-    }
-    res.send(adsByProfile(profile).flat())
-})
+//                 })
+//             }
+//         })
+//         adsInState.forEach(ad => {
+//             if(ad[1].interests_also_match != null){
+//                 targetGroup.forEach(interest => {
+//                     if(ad[1].interests_also_match.includes(interest)){
+//                         if(!newArray.includes(ad)){
+//                         newArray.push(ad)}
+//                     }
+//                 })
+//             }
+//         })
+//         return newArray
+//     }
+//     res.send(adsByProfile(profile).flat())
+// })
+
+// function murica(){
+//     var adCounterUSA = {"ad_USA": 0}
+//     var moneyCounterUSA = {"money_USA": 0}
+
+//     var aMurica = Object.entries(adsForMurica)
+//     console.log(aMurica.aMurica.length)
+    
+    
+
+// }
+
+
 
 
 function totalForState(oneState){
     
     var thisState = Object.entries(allAdsWithState)
-    var spendingTotal = 0
-    var impressionTotal = 0
+    var spendingTotal = {"total_spent": 0 }
+    var impressionTotal = {"impression_total": 0}
+    var adCounter = {"ad_count": 0}
+
+
+
     var testSpendArray = []
     thisState.forEach((element, index, array) => {
  
-
         const isState = element[1].state
-
+        const isID = element[0]
         if (isState && isState === oneState) {
             const stateSpend = element[1].ad_spend
             const stateImpression = element[1].impressions
             if (stateSpend && stateSpend > 0){
-            spendingTotal += stateSpend
+                spendingTotal['total_spent'] = Math.floor(spendingTotal.total_spent += stateSpend)
+            }if (isID){
+                let counter = 0
+                counter ++; 
+                adCounter.ad_count += counter 
             }
-            impressionTotal += stateImpression
-        }   
-        
-    })
+            impressionTotal.impression_total += stateImpression
+        }
+
+    })  
 
 
-    return new Array(spendingTotal, impressionTotal)
+    return new Array(spendingTotal, impressionTotal, adCounter)
 }
 
 
@@ -186,9 +207,10 @@ function totalForState(oneState){
 app.get('/api/totals/:state', (req, res) => {
 
     var oneState = req.params.state
-    console.log("Test")
+
   
     totalForState(oneState)
+
     
     res.send(totalForState(oneState))
 })
