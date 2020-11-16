@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
 const axios = require('axios')
-
 const {adsWithState} = require("./adsWithState.js")
 const {allAdsWithState} = require("./allAdsWithState.js")
 const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
+const {adTotals} = require("./totals.js");
+const { test } = require('picomatch');
 app.use(express.static('public'))
 
 
@@ -153,6 +154,76 @@ app.get('/api/ads/:state/:profile', (req, res) => {
     res.send(adsByProfile(profile).flat())
 })
 
+
+function totalForState(oneState){
+    
+    var thisState = Object.entries(allAdsWithState)
+    var spendingTotal = 0
+    var impressionTotal = 0
+    var testSpendArray = []
+    thisState.forEach((element, index, array) => {
+ 
+
+        const isState = element[1].state
+
+        if (isState && isState === oneState) {
+            const stateSpend = element[1].ad_spend
+            const stateImpression = element[1].impressions
+            if (stateSpend && stateSpend > 0){
+            spendingTotal += stateSpend
+            }
+            impressionTotal += stateImpression
+        }   
+        
+    })
+
+
+    return new Array(spendingTotal, impressionTotal)
+}
+
+
+
+app.get('/api/totals/:state', (req, res) => {
+
+    var oneState = req.params.state
+    console.log("Test")
+  
+    totalForState(oneState)
+    
+    res.send(totalForState(oneState))
+})
+
+
+
+
+app.get('/api/ads/:state', (req, res) => {
+    var array = []
+
+    let data = Object.entries(allAdsWithState)
+    for (let i = 0; i < data.length; i++){
+        const isState = data[i][1].state
+        if (isState && isState === req.params.state) {
+            array.push(data[i])
+        }
+    }
+
+
+    res.send(array.flat())
+
+})
+
+
+app.get('/api/ads', (req, res) => {
+    var allAds = [];
+    let data = Object.entries(allAdsUSA)
+    for (let i = 0; i < data.length; i++){
+            allAds.push(data[i])
+    }
+    console.log(data.length)
+    res.send(allAds.flat())
+})
+
 app.listen(4567, () => {
     console.log('listening on port 4567')
 });
+
