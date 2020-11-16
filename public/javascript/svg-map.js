@@ -32,6 +32,55 @@ let demographicTarget = document.querySelector("td.demographic-result")
 // 'targeted posts deployed' field
 let totalTargeted = document.querySelector(".location-deployed-result");
 
+function usaTotal() {
+    axios.get('/api/whitePride').then(res => {
+        whitePrideData.textContent = res.data.length
+    })
+    axios.get(`/api/blackPride`).then(res => {
+        blackPrideData.textContent = res.data.length
+    })
+    axios.get(`/api/antiMuslim`).then(res => {
+        antiMuslimData.textContent = res.data.length
+    })
+    axios.get(`/api/hispanics`).then(res => {
+        hispanicData.textContent = res.data.length
+    })
+    axios.get(`/api/lgbtq`).then(res => {
+        lgbtqData.textContent = res.data.length
+    })
+    axios.get(`/api/muslims`).then(res => {
+        muslimsData.textContent = res.data.length
+    })
+    axios.get(`/api/incarcerated`).then(res => {
+        incarceratedData.textContent = res.data.length
+    })
+    axios.get(`/api/gunOwners`).then(res => {
+        gunOwnersData.textContent = res.data.length
+    })
+    axios.get(`/api/libertarians`).then(res => {
+        libertariansData.textContent = res.data.length
+    })
+    axios.get(`/api/policeOfficers`).then(res => {
+        policeData.textContent = res.data.length
+    })
+    axios.get(`/api/veterans`).then(res => {
+        veteransData.textContent = res.data.length
+    })
+    axios.get(`/api/leftWing`).then(res => {
+        leftWingData.textContent = res.data.length
+    })
+    axios.get(`/api/rightWing`).then(res => {
+        rightWingData.textContent = res.data.length
+    })
+    axios.get(`/api/christians`).then(res => {
+        christiansData.textContent = res.data.length
+    })
+    axios.get(`/api/firstNations`).then(res => {
+        firstNationsData.textContent = res.data.length
+    })
+
+}
+
 
 function adsByTarget(state) {
     axios.get(`/api/ads/${state}/whitePride`).then(res => {
@@ -64,6 +113,21 @@ function adsByTarget(state) {
     axios.get(`/api/ads/${state}/policeOfficers`).then(res => {
         policeData.textContent = res.data.length
     })
+    axios.get(`/api/ads/${state}/veterans`).then(res => {
+        veteransData.textContent = res.data.length
+    })
+    axios.get(`/api/ads/${state}/leftWing`).then(res => {
+        leftWingData.textContent = res.data.length
+    })
+    axios.get(`/api/ads/${state}/rightWing`).then(res => {
+        rightWingData.textContent = res.data.length
+    })
+    axios.get(`/api/ads/${state}/christians`).then(res => {
+        christiansData.textContent = res.data.length
+    })
+    axios.get(`/api/ads/${state}/firstNations`).then(res => {
+        firstNationsData.textContent = res.data.length
+    })
     
 }
 
@@ -83,13 +147,21 @@ function hoverHighlight(el) {
     let state = el.getAttribute("data-state");
     // adsByTarget(state);
 
+    // update target/spend/impression info field
     axios.get(`/api/totals/${state}`).then(res => {
         let adCount = res.data[2].ad_count;
         let totalSpent = res.data[0].total_spent;
         let impressions = res.data[1].impression_total;
-        totalTargeted.textContent = `${adCount}`;
-        document.querySelector(".location-spent-result").textContent = `${totalSpent}`;
-        document.querySelector(".location-impressions-result").textContent = impressions
+        let countryWideAds = 3476;
+        let usaSpend = 5848355;
+        let usaImpressions = 39601632;
+        let stateTargetedAds = 771;
+        let stateTargetedSpend = 1428202;
+        totalTargeted.textContent = `${(countryWideAds - stateTargetedAds) + adCount}`;
+        document.querySelector(".location-spent-result").parentElement.classList.add("hidden-table");        
+        // document.querySelector(".location-spent-result").textContent = `${totalSpent}`;
+        document.querySelector(".location-impressions-result").parentElement.classList.add("hidden-table");
+        // document.querySelector(".location-impressions-result").textContent = impressions
     })
 }
 
@@ -114,6 +186,7 @@ function fadeStates(el) {
     adsByTarget(state);
 }
 
+// reset
 function resetAdsByTarget() {
     whitePrideData.textContent = "-"
     blackPrideData.textContent = "-"
@@ -144,16 +217,31 @@ svgStates.forEach((el) => {
     })
 });
 
-
+// reset USA/state header and total ad/rub/impressions when mouse leaves map
 svgMap.addEventListener("mouseleave", () => {
     mapHeader.textContent = "USA";
     resetAdsByTarget();
+    totalTargeted.textContent = '3476';
+    document.querySelector(".location-spent-result").textContent = '5848355';
+    document.querySelector(".location-impressions-result").textContent = '39601632';
+
+    document.querySelector(".location-spent-result").parentElement.classList.remove("hidden-table");        
+    document.querySelector(".location-impressions-result").parentElement.classList.remove("hidden-table");
+
+
+    svgStates.forEach((el => {
+            el.classList.remove("highlight-state");
+        }))
+
+    usaTotal();
 })
 
-// click listener on 
+// click listener on demographic list items to change "targeting" header
 demographicList.forEach((el) => {
     el.addEventListener("click", () => {
 
         demographicTarget.textContent = `${el.textContent.slice(0, -1)}`
     })
 })
+
+usaTotal();
