@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-const axios = require('axios')
-const {adsWithState} = require("./adsWithState.js")
+
 const {allAdsWithState} = require("./allAdsWithState.js")
 const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
-const {adTotals} = require("./totals.js");
-const { test } = require('picomatch');
+
 app.use(express.static('public'))
 
 function adsByProfile(ads, groupInterests, groupLikes){
@@ -45,52 +43,36 @@ function adsByProfile(ads, groupInterests, groupLikes){
     }
     return newArray
 }
-function setTargetGroup(param){
-    let interests = '';
-    let likes = '';
-    let culturalAfinity = '';
 
-    if(param == "blackPride"){
-        interests =  targetGroups.blackPowerInterests
-        likes = targetGroups.blackPowerLikes
-        culturalAfinity = targetGroups.blackPowerCulturalAfinity
-    }else if(param == "antiMuslim"){
-        interests = targetGroups.antiMuslimInterests
-        likes = targetGroups.antiMuslimLikes
-    }else if(param == "whitePride"){
-        interests = targetGroups.whiteNationalistInterests
-    }else if(param == "hispanics"){
-        interests = targetGroups.HispanicInterests
-    }else if(param == "lgbtq"){
-        interests = targetGroups.lgbtqInterests
-    }else if(param == "muslims"){
-        interests = targetGroups.muslimInterests
-    }else if(param == "incarcerated"){
-        interests = targetGroups.prisonersInterests
-    }else if(param == "gunOwners"){
-        interests = targetGroups.gunOwnersInterests
-    }else if(param == "libertarians"){
-        interests = targetGroups.libertariansInterests
-    }else if(param == "policeOfficers"){
-        interests = targetGroups.policeInterests
-    }else if(param == "veterans"){
-        interests = targetGroups.veteransInterests
-    }else if(param == "leftWing"){
-        interests = targetGroups.leftWingInterests
-        likes = targetGroups.leftWingInterests
-    }else if(param == "rightWing"){
-        interests = targetGroups.rightWingInterests
-    }else if(param == "christians"){
-        interests = targetGroups.christianInterests
-    }else if(param == "firstNations"){
-        interests = targetGroups.firstNationInterests
-    }
-    var target = {interest: interests, likes: likes}
-    return target
+function totalForState(oneState){
+    
+    var thisState = Object.entries(allAdsWithState)
+    var spendingTotal = {"total_spent": 0 }
+    var impressionTotal = {"impression_total": 0}
+    var adCounter = {"ad_count": 0}
+
+    thisState.forEach((element, index, array) => {
+        const isState = element[1].state
+        const isID = element[0]
+        if (isState && isState === oneState) {
+            const stateSpend = element[1].ad_spend
+            const stateImpression = element[1].impressions
+            if (stateSpend && stateSpend > 0){
+                spendingTotal['total_spent'] = Math.floor(spendingTotal.total_spent += stateSpend)
+            }if (isID){
+                let counter = 0
+                counter ++; 
+                adCounter.ad_count += counter 
+            }
+            impressionTotal.impression_total += stateImpression
+        }
+    })  
+    return new Array(spendingTotal, impressionTotal, adCounter)
 }
+
 app.get('/api/ads/:state', (req, res) => {
     var array = []
-    var totalsArray = []
+
     let data = Object.entries(allAdsWithState)
     for (let i = 0; i < data.length; i++){
         const isState = data[i][1].state
@@ -98,9 +80,7 @@ app.get('/api/ads/:state', (req, res) => {
             array.push(data[i])
         }
     }
-
     res.send(array.flat())
-
 })
 
 app.get('/api/ads', (req, res) => {
@@ -109,7 +89,7 @@ app.get('/api/ads', (req, res) => {
     for (let i = 0; i < data.length; i++){
             allAds.push(data[i])
     }
-    console.log(data.length)
+    console.log(allAds.length)
     res.send(allAds.flat())
 })
 
@@ -164,7 +144,6 @@ app.get('/api/:profile', (req, res) => {
     res.send(adsByProfile(ads, interests, likes))
     // res.send('')
 })
-
 
 app.get('/api/ads/:state/:profile', (req, res) => {
  
@@ -221,41 +200,10 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 
 })
 
-
-
-function totalForState(oneState){
-    
-    var thisState = Object.entries(allAdsWithState)
-    var spendingTotal = {"total_spent": 0 }
-    var impressionTotal = {"impression_total": 0}
-    var adCounter = {"ad_count": 0}
-
-    thisState.forEach((element, index, array) => {
-        const isState = element[1].state
-        const isID = element[0]
-        if (isState && isState === oneState) {
-            const stateSpend = element[1].ad_spend
-            const stateImpression = element[1].impressions
-            if (stateSpend && stateSpend > 0){
-                spendingTotal['total_spent'] = Math.floor(spendingTotal.total_spent += stateSpend)
-            }if (isID){
-                let counter = 0
-                counter ++; 
-                adCounter.ad_count += counter 
-            }
-            impressionTotal.impression_total += stateImpression
-        }
-    })  
-    return new Array(spendingTotal, impressionTotal, adCounter)
-}
-
 app.get('/api/totals/:state', (req, res) => {
-
     var oneState = req.params.state
 
-  
     totalForState(oneState)
-
     
     let result = totalForState(oneState)
     res.send(result)
@@ -273,12 +221,9 @@ app.get('/api/ads/:state', (req, res) => {
         }
     }
 
- 
-
     res.send(array.flat())
 
 })
-
 
 app.get('/api/ads', (req, res) => {
     var allAds = [];
@@ -293,4 +238,3 @@ app.get('/api/ads', (req, res) => {
 app.listen(4567, () => {
     console.log('listening on port 4567')
 });
-

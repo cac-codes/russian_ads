@@ -70,7 +70,7 @@ function usaTotal() {
         leftWingData.textContent = res.data.length
     })
     axios.get(`/api/rightWing`).then(res => {
-        rightWingData.textContent = res.data.length
+        farRightData.textContent = res.data.length
     })
     axios.get(`/api/christians`).then(res => {
         christiansData.textContent = res.data.length
@@ -120,7 +120,7 @@ function adsByTarget(state) {
         leftWingData.textContent = res.data.length
     })
     axios.get(`/api/ads/${state}/rightWing`).then(res => {
-        rightWingData.textContent = res.data.length
+        farRightData.textContent = res.data.length
     })
     axios.get(`/api/ads/${state}/christians`).then(res => {
         christiansData.textContent = res.data.length
