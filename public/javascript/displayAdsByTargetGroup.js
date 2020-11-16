@@ -24,7 +24,7 @@ function displayAd(res) {
             let img = document.createElement("img")
             
             img.src = img_url
-            img.classList.add("advert")
+            img.classList.add("card")
         
             numberstring = index.toString()
             

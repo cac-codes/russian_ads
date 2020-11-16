@@ -89,7 +89,6 @@ app.get('/api/ads', (req, res) => {
     for (let i = 0; i < data.length; i++){
             allAds.push(data[i])
     }
-    console.log(allAds.length)
     res.send(allAds.flat())
 })
 

@@ -42,7 +42,7 @@ function displayAdverts(response, number) {
       img_url = response.data[number].image
       let img = document.createElement("img")
       img.src = img_url
-      img.classList.add("advert")
+      img.classList.add("card")
       
       numberstring = number.toString()
       //make our new elements divs, to host the image and append to our HTML parent advert-container
