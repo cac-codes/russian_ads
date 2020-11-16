@@ -1,21 +1,13 @@
 
-function displayAdverts(response) {
   
-  for (var i = 0; i < 100; i++) {
-    var number = Math.floor(Math.random()*100)
+function displayAdverts(response, number) { 
 
-
-    while (number%2 == 0) {
-      number = Math.floor(Math.random()*100)
-    }
-   
     if (number%2 ==!0 && response.data[number].image != null) {
       
       //make a variable to establish full list of interests
       var interests = response.data[number].interests
       var alsoInterests = response.data[number].interests_also_match
 
-      
       //remove nulls
       if (interests !== null) {
         var interestsString = interests.join()
@@ -104,10 +96,18 @@ function displayAdverts(response) {
       adContainer2.appendChild(adContainer4)
       adContainer3.appendChild(img)
     }    
-  }
 }
 
 function getAdvertRaw () {
   const url = "http://localhost:4567/api/ads"
-  axios.get(url).then(displayAdverts)
+  axios.get(url).then(response => {
+    for (var i = 0; i < 100; i++) {
+      var number = Math.floor(Math.random()*3476)
+  
+      while (number%2 == 0) {
+        number = Math.floor(Math.random()*3476)
+      }
+      displayAdverts(response, number)
+    }
+  })
 }

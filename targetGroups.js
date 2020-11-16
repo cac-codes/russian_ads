@@ -252,27 +252,27 @@ const rightWingInterests = [
     "TheBlaze",
     "Donald Trump Jr.",
     "Texas Nationalist Movement",
-"Hog Hunting Texas Style",
-"Texas Secession",
-"Texas Hog Hunting",
-"Don't Mess with Texas",
-"Texas Gun Owner",
-"Texas Deer Association",
-"Texas Parks and Wildlife - Hunt",
-"Don't Mess with Texas Program",
-"Texas secession movements",
-"Republic of Texas",
-"Houston, Texas",
-"made in texas",
-"Texas Deer Hunting",
-"Texas Born Texas Proud",
-"Daughters of the Republic of Texas",
-"The Texas Huntress",
-"Texas Got It Right",
-"Texas Values",
-"Open Carry Texas",
-"Texas Gun Talk",
-"Keep Texas Working",
+    "Hog Hunting Texas Style",
+    "Texas Secession",
+    "Texas Hog Hunting",
+    "Don't Mess with Texas",
+    "Texas Gun Owner",
+    "Texas Deer Association",
+    "Texas Parks and Wildlife - Hunt",
+    "Don't Mess with Texas Program",
+    "Texas secession movements",
+    "Republic of Texas",
+    "Houston, Texas",
+    "made in texas",
+    "Texas Deer Hunting",
+    "Texas Born Texas Proud",
+    "Daughters of the Republic of Texas",
+    "The Texas Huntress",
+    "Texas Got It Right",
+    "Texas Values",
+    "Open Carry Texas",
+    "Texas Gun Talk",
+    "Keep Texas Working",
 ];
 
 const christianInterests = [
@@ -388,8 +388,6 @@ const policeInterests = [
     "National Police Wives Association",
     "Heroes Behind The Badge"
 ];
-
-
 
 const firstNationInterests = [
         "American Indian Movement",

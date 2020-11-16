@@ -43,6 +43,5 @@ fs.readFile("data.json", function (error, content){
         }} 
 
     });
-    // console.log(allAdsUSA)
     fs.writeFileSync("allAdsUSA.js", JSON.stringify(allAdsUSA))
 })
