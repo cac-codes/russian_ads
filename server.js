@@ -9,7 +9,85 @@ const {adTotals} = require("./totals.js");
 const { test } = require('picomatch');
 app.use(express.static('public'))
 
+function adsByProfile(ads, groupInterests, groupLikes){
+    var newArray = []
+    ads.forEach(ad => {
+        if(ad[1].interests != null){
+            groupInterests.forEach(interest => {
+                if(ad[1].interests.includes(interest)){
+                    if(!newArray.includes(ad)){
+                    newArray.push(ad)}
+                }
+            })
+        }
+    })
+    ads.forEach(ad => {
+        if(ad[1].interests_also_match != null){
+            groupInterests.forEach(interest => {
+                if(ad[1].interests_also_match.includes(interest)){
+                    if(!newArray.includes(ad)){
+                    newArray.push(ad)}
+                }
+            })
+        }
+    })
+    if(groupLikes != ''){
+        ads.forEach(ad => {
+            if(ad[1].likes != null){
+                groupLikes.forEach(interest => {
+                    if(ad[1].likes.includes(interest)){
+                        if(!newArray.includes(ad)){
+                        newArray.push(ad)}
+                    }
+                })
+            }
+        })
+    }
+    return newArray
+}
+function setTargetGroup(param){
+    let interests = '';
+    let likes = '';
+    let culturalAfinity = '';
 
+    if(param == "blackPride"){
+        interests =  targetGroups.blackPowerInterests
+        likes = targetGroups.blackPowerLikes
+        culturalAfinity = targetGroups.blackPowerCulturalAfinity
+    }else if(param == "antiMuslim"){
+        interests = targetGroups.antiMuslimInterests
+        likes = targetGroups.antiMuslimLikes
+    }else if(param == "whitePride"){
+        interests = targetGroups.whiteNationalistInterests
+    }else if(param == "hispanics"){
+        interests = targetGroups.HispanicInterests
+    }else if(param == "lgbtq"){
+        interests = targetGroups.lgbtqInterests
+    }else if(param == "muslims"){
+        interests = targetGroups.muslimInterests
+    }else if(param == "incarcerated"){
+        interests = targetGroups.prisonersInterests
+    }else if(param == "gunOwners"){
+        interests = targetGroups.gunOwnersInterests
+    }else if(param == "libertarians"){
+        interests = targetGroups.libertariansInterests
+    }else if(param == "policeOfficers"){
+        interests = targetGroups.policeInterests
+    }else if(param == "veterans"){
+        interests = targetGroups.veteransInterests
+    }else if(param == "leftWing"){
+        interests = targetGroups.leftWingInterests
+        likes = targetGroups.leftWingInterests
+    }else if(param == "rightWing"){
+        interests = targetGroups.rightWingInterests
+    }else if(param == "christians"){
+        interests = targetGroups.christianInterests
+    }else if(param == "firstNations"){
+        interests = targetGroups.firstNationInterests
+    }
+    var target = {interest: interests, likes: likes}
+    return target
+}
 app.get('/api/ads/:state', (req, res) => {
     var array = []
     var totalsArray = []
@@ -37,8 +115,6 @@ app.get('/api/ads', (req, res) => {
 
 app.get('/api/:profile', (req, res) => {
      
-    // policeForceJobtitle,
-    // antPoliceInterests,
     let interests = '';
     let likes = '';
     let culturalAfinity = '';
@@ -79,49 +155,14 @@ app.get('/api/:profile', (req, res) => {
         interests = targetGroups.firstNationInterests
     }
 
-    function adsByProfile(groupInterests, groupLikes){
-
-        var ads = [];
-        let data = Object.entries(allAdsUSA)
-        for (let i = 0; i < data.length; i++){
-            ads.push(data[i])
-        }
-        var newArray = []
-        ads.forEach(ad => {
-            if(ad[1].interests != null){
-                groupInterests.forEach(interest => {
-                    if(ad[1].interests.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
-                })
-            }
-        })
-        ads.forEach(ad => {
-            if(ad[1].interests_also_match != null){
-                groupInterests.forEach(interest => {
-                    if(ad[1].interests_also_match.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
-                })
-            }
-        })
-        if(groupLikes != ''){
-            ads.forEach(ad => {
-                if(ad[1].likes != null){
-                    groupLikes.forEach(interest => {
-                        if(ad[1].likes.includes(interest)){
-                            if(!newArray.includes(ad)){
-                            newArray.push(ad)}
-                        }
-                    })
-                }
-            })
-        }
-        return newArray
+    var ads = [];
+    let data = Object.entries(allAdsUSA)
+    for (let i = 0; i < data.length; i++){
+        ads.push(data[i])
     }
-    res.send(adsByProfile(interests, likes))
+
+    res.send(adsByProfile(ads, interests, likes))
+    // res.send('')
 })
 
 
@@ -167,51 +208,16 @@ app.get('/api/ads/:state/:profile', (req, res) => {
         interests = targetGroups.firstNationInterests
     }
 
-    function adsByProfile(groupInterests, groupLikes){
-        var ads = [];
-        let data = Object.entries(allAdsUSA)
-        for (let i = 0; i < data.length; i++){
-            const isState = data[i][1].state
-            if (isState && isState === req.params.state) {
-                ads.push(data[i])
-            }
+    var ads = [];
+    let data = Object.entries(allAdsUSA)
+    for (let i = 0; i < data.length; i++){
+        const isState = data[i][1].state
+        if (isState && isState === req.params.state) {
+            ads.push(data[i])
         }
-        var newArray = []
-        ads.forEach(ad => {
-            if(ad[1].interests != null){
-                groupInterests.forEach(interest => {
-                    if(ad[1].interests.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
-                })
-            }
-        })
-        ads.forEach(ad => {
-            if(ad[1].interests_also_match != null){
-                groupInterests.forEach(interest => {
-                    if(ad[1].interests_also_match.includes(interest)){
-                        if(!newArray.includes(ad)){
-                        newArray.push(ad)}
-                    }
-                })
-            }
-        })
-        if(groupLikes != ''){
-            ads.forEach(ad => {
-                if(ad[1].likes != null){
-                    groupLikes.forEach(interest => {
-                        if(ad[1].likes.includes(interest)){
-                            if(!newArray.includes(ad)){
-                            newArray.push(ad)}
-                        }
-                    })
-                }
-            })
-        }
-        return newArray
     }
-    res.send(adsByProfile(interests, likes).flat())
+
+    res.send(adsByProfile(ads, interests, likes).flat())
 
 })
 
@@ -224,11 +230,7 @@ function totalForState(oneState){
     var impressionTotal = {"impression_total": 0}
     var adCounter = {"ad_count": 0}
 
-
-
-    var testSpendArray = []
     thisState.forEach((element, index, array) => {
- 
         const isState = element[1].state
         const isID = element[0]
         if (isState && isState === oneState) {
@@ -243,10 +245,7 @@ function totalForState(oneState){
             }
             impressionTotal.impression_total += stateImpression
         }
-
     })  
-
-
     return new Array(spendingTotal, impressionTotal, adCounter)
 }
 
