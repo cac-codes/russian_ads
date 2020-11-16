@@ -136,7 +136,7 @@
 
     <table>
       <tr class="location-info-deployed">
-        <td class="location-deployed-result">#####</td>
+        <td class="location-deployed-result">3476</td>
         <td>targeted posts deployed </td>
    
       </tr>
@@ -145,10 +145,20 @@
     <table>
       <tr class="location-info-spent">
         <td class = "with">with</td>
-        <td class="location-spent-result">#####</td>
-        <td class="paid"> RUB paid to facebook.</td>
+        <td class="location-spent-result">5848355</td>
+        <td class="paid"> RUB paid to facebook</td>
       </tr>
     </table>  
+
+    <table>
+      <tr class="location-info-spent">
+        <td class="with">for</td>
+        <td class="location-impressions-result">39601632</td>
+        <td class="paid">impressions</td>
+      </tr>
+    </table>
+
+
 
   </div>
    
@@ -242,7 +252,7 @@
   <table>
     <tr class="array-title">
       <td class = "demographic-title">Targeting:</td>
-      <td class="demographic-result">demographic</td>
+      <td class="demographic-result">All</td>
     </tr>
   </table>
 
@@ -253,9 +263,9 @@
       <td class = "filter-by">FILTER BY:</td>
     </table>
     <!-- <li><a>Filter By:</a></li> -->
-    <li><a href="">Impressions</a></li>
-    <li><a href="">Cost</a></li>
-    <li style="float:right"><a class="active" href="">Random Sample</a></li>
+    <li><a class="filter-by-impressions" href="">Impressions</a></li>
+    <li><a class="filter-by-spend"href="">Cost</a></li>
+    <li style="float:right"><a class="active randomSample" href="">Random Sample</a></li>
   </ul>
 </nav>
 <!-- right column filter title-->
@@ -264,13 +274,10 @@
     </div>
   </div>
 
-
-  
-  
-
   </article>
     <script src="javascript/displayAdsByTargetGroup.js"></script>
     <script src="javascript/peter-advert.js"></script>
+    <script src="javascript/filter.js"></script>
     <script src="javascript/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="javascript/svg-map.js"></script>

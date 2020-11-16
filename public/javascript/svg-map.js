@@ -24,39 +24,44 @@ let policeData = document.querySelector(".police-result");
 let veteransData = document.querySelector(".veterans-result");
 let christiansData = document.querySelector(".christians-result");
 
+// demographics table categories
+let demographicList = document.querySelectorAll(".demographic")
+let demographicTarget = document.querySelector("td.demographic-result")
+
+
+// 'targeted posts deployed' field
+let totalTargeted = document.querySelector(".location-deployed-result");
+
 
 function adsByTarget(state) {
-    axios.get(`/api/ads/${state}/whiteNationalist`).then(res => {
+    axios.get(`/api/ads/${state}/whitePride`).then(res => {
         whitePrideData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/blackPower`).then(res => {
+    axios.get(`/api/ads/${state}/blackPride`).then(res => {
         blackPrideData.textContent = res.data.length
     })
     axios.get(`/api/ads/${state}/antiMuslim`).then(res => {
         antiMuslimData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/Hispanic`).then(res => {
+    axios.get(`/api/ads/${state}/hispanics`).then(res => {
         hispanicData.textContent = res.data.length
-    })
-    axios.get(`/api/ads/${state}/whiteNationalist`).then(res => {
-        whitePrideData.textContent = res.data.length
     })
     axios.get(`/api/ads/${state}/lgbtq`).then(res => {
         lgbtqData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/muslim`).then(res => {
+    axios.get(`/api/ads/${state}/muslims`).then(res => {
         muslimsData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/prisoners`).then(res => {
+    axios.get(`/api/ads/${state}/incarcerated`).then(res => {
         incarceratedData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/concervativeGunOwners`).then(res => {
+    axios.get(`/api/ads/${state}/gunOwners`).then(res => {
         gunOwnersData.textContent = res.data.length
     })
     axios.get(`/api/ads/${state}/libertarians`).then(res => {
         libertariansData.textContent = res.data.length
     })
-    axios.get(`/api/ads/${state}/policeForce`).then(res => {
+    axios.get(`/api/ads/${state}/policeOfficers`).then(res => {
         policeData.textContent = res.data.length
     })
     
@@ -76,13 +81,25 @@ function hoverHighlight(el) {
 
     mapHeader.textContent = el.getAttribute("data-state")
     let state = el.getAttribute("data-state");
-    adsByTarget(state);
+    // adsByTarget(state);
+
+    axios.get(`/api/totals/${state}`).then(res => {
+        let adCount = res.data[2].ad_count;
+        let totalSpent = res.data[0].total_spent;
+        let impressions = res.data[1].impression_total;
+        totalTargeted.textContent = `${adCount}`;
+        document.querySelector(".location-spent-result").textContent = `${totalSpent}`;
+        document.querySelector(".location-impressions-result").textContent = impressions
+    })
 }
 
 // fade rest of states and highlight state when state is clicked
 function fadeStates(el) {
     if (el.classList.contains("highlight-state")) {
         el.classList.remove("highlight-state")
+        svgStates.forEach((el => {
+            el.classList.remove("faded-state");
+        }))
     } else {
         svgStates.forEach((el => {
             el.classList.remove("highlight-state");
@@ -133,3 +150,10 @@ svgMap.addEventListener("mouseleave", () => {
     resetAdsByTarget();
 })
 
+// click listener on 
+demographicList.forEach((el) => {
+    el.addEventListener("click", () => {
+
+        demographicTarget.textContent = `${el.textContent.slice(0, -1)}`
+    })
+})

@@ -1,14 +1,9 @@
 
-// var card = document.querySelector('.card');
-// card.addEventListener('click', function() {
-//   card.classList.toggle('is-flipped');
-// });
-
-
 function displayAdverts(response) {
   
   for (var i = 0; i < 100; i++) {
     var number = Math.floor(Math.random()*100)
+
 
     while (number%2 == 0) {
       number = Math.floor(Math.random()*100)
@@ -42,6 +37,7 @@ function displayAdverts(response) {
       }
         
       //grab the amount spent, impressionsm and currency
+
       let adSpend = response.data[number].ad_spend
       let impressions = response.data[number].impressions
       let currency = response.data[number].ad_spend_currency
@@ -49,6 +45,7 @@ function displayAdverts(response) {
       if (currency == "USD") {
         adSpend = adSpend * 77
       }
+
       //grabbing the image and placing in new element
       img_url = response.data[number].image
       let img = document.createElement("img")
@@ -60,6 +57,8 @@ function displayAdverts(response) {
       adContainer1 = document.createElement("div")
       adContainer1.classList.add("scene") 
       adContainer1.classList.add("scene--card")
+      adContainer1.dataset.impressions = impressions
+      adContainer1.dataset.spend = adSpend
       adContainer2 = document.createElement("div")
       adContainer2.classList.add("card")
       adContainer2.addEventListener('click', function(event) {
