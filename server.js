@@ -79,7 +79,7 @@ function totalForState(state){
 
     if (state === req.params.state){
 
-        var totalsData = Object.entriess(adsWithState)
+        var totalsData = Object.entriess(allAdsWithState)
         var impression = totalsData[i][1].impressions
         var spendMoney = totalsData[i][1].ad_spend
 
@@ -96,7 +96,9 @@ function totalForState(state){
 
 app.get('/api/ads/totals', (req, res) => {
 
+    totalForState(req.params.state)
 
+    res.send(totalForState)
 })
 
 
