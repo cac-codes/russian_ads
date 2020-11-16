@@ -1,21 +1,29 @@
 
-var card = document.querySelector('.card');
-card.addEventListener('click', function() {
-  card.classList.toggle('is-flipped');
-});
-
+// var card = document.querySelector('.card');
+// card.addEventListener('click', function() {
+//   card.classList.toggle('is-flipped');
+// });
 
 
 function displayAdverts(response) {
 
-  for (var i = 0; i < 100; i++) {
-    var number = Math.floor(Math.random()*20)
+  for (var i = 0; i < 2; i++) {
+    var number = Math.floor(Math.random()*3476)
     while (number%2 == 0) {
-      number = Math.floor(Math.random()*20)
+      number = Math.floor(Math.random()*3476)
     }
    
     if (number%2 ==!0 && response.data[number].image != null) {
       
+      
+      //to grab ad_spend, ad_spend:, ad_spend_currency:, interests:, interests_also_match:, impressions
+
+     
+      let adSpend = response.data[number].ad_spend
+      let impressions = response.data[number].impressions
+      
+      
+
       img_url = response.data[number].image
       let img = document.createElement("img")
       
@@ -32,7 +40,8 @@ function displayAdverts(response) {
       adContainer2.classList.add("card")
       
       adContainer2.addEventListener('click', function(event) {
-        event.target.parentNode.parentNode.classList.toggle('is-flipped');
+          event.target.parentNode.parentNode.classList.toggle('is-flipped');
+
       });
       adContainer3 = document.createElement("div")
       adContainer3.classList.add("card__face")
@@ -40,8 +49,14 @@ function displayAdverts(response) {
       adContainer4 = document.createElement("div")
       adContainer4.classList.add("card__face")
       adContainer4.classList.add("card__face--back")
-      adContainer4.textContent = "back"
-      console.log(adContainer4)
+      adSpendBox = document.createElement("div")
+      adSpendBox.classList.add("back-card-info")
+      adSpendBox.textContent = `Dollars Spent: ${Math.round(adSpend)}`
+      adContainer4.appendChild(adSpendBox)
+      impressionsBox = document.createElement("div")
+      impressionsBox.classList.add("back-card-info")
+      impressionsBox.textContent= `Impressions: ${impressions}`
+      adContainer4.appendChild(impressionsBox)
 
       advertContainerGreatGrandad = document.querySelector(".advert-container")
       
@@ -50,6 +65,8 @@ function displayAdverts(response) {
       adContainer2.appendChild(adContainer3)
       adContainer2.appendChild(adContainer4)
       adContainer3.appendChild(img)
+
+      
     }    
       
 
@@ -58,6 +75,7 @@ function displayAdverts(response) {
 }
 
 function getAdvertRaw () {
+  
   const url = "http://localhost:4567/api/ads"
  
   axios.get(url).then(displayAdverts)

@@ -4,9 +4,12 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+html {
+  height: 100vh;
+}
 body 
 {
+
   align-items: center;
   display: grid;
   justify-content: center;
@@ -232,5 +235,6 @@ tr
   justify-content: start;
   max-width: max-content;
   padding-right: 2rem;
+  overflow: scroll
 }
 
