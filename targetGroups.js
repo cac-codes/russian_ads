@@ -402,28 +402,25 @@ const firstNationInterests = [
 ];
 
 module.exports = {
-
-    blackPowerCulturalAfinity,
     blackPowerInterests,
     blackPowerLikes,
-    PoliceInterests,
-    firstNationInterests,
-    libertariansInterests,
-    GunOwnersInterests,
-    prisonersInterests,
-    christianInterests,
-    rightWingInterests,
-    muslimInterests,
-    veteransInterests,
-    leftWingInterests,
+    blackPowerCulturalAfinity,
     blackPowerExclude,
-    policeForceJobtitle,
-    leftWingLikes,
-    gbtqInterests,
-    lgbtqInterests,
-    HispanicInterests,
     antiMuslimInterests,
+    antiMuslimLikes,
     whiteNationalistInterests,
-    antiMuslimLikes
-    
-}   
+    HispanicInterests,
+    lgbtqInterests,
+    leftWingLikes,
+    leftWingInterests,
+    veteransInterests,
+    muslimInterests,
+    rightWingInterests,
+    christianInterests,
+    prisonersInterests,
+    gunOwnersInterests,
+    libertariansInterests,
+    policeForceJobtitle,
+    policeInterests,
+    firstNationInterests
+}
