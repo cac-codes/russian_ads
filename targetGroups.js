@@ -26,7 +26,7 @@ const whiteNationalist = [
     "American Civil War",
     "South United"
 ];
-const Hispanic = [];
+const hispanic = [];
 const lgbtq = [
     "Gay pride", 
     "LGBT community", 
@@ -149,7 +149,7 @@ module.exports = {
     blackPower,
     antiMuslim,
     whiteNationalist,
-    Hispanic,
+    hispanic,
     lgbtq,
     muslim,
     prisoners,
