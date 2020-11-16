@@ -5,6 +5,7 @@ const {adsWithState} = require("./adsWithState.js")
 const {allAdsWithState} = require("./allAdsWithState.js")
 const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
+const {adTotals} = require("./totals.js")
 app.use(express.static('public'))
 
 app.get('/api/ads/:state/:profile', (req, res) => {
@@ -70,6 +71,36 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 
 
 
+function totalForState(state){
+    
+    var stateTotal = []
+    var totalImpressionInState = 0
+    var totalSpentInState = 0
+
+    if (state === req.params.state){
+
+        var totalsData = Object.entriess(adsWithState)
+        var impression = totalsData[i][1].impressions
+        var spendMoney = totalsData[i][1].ad_spend
+
+        for (let i = 0; i < totalsData.length; i++){
+            totalImpressionInState += impression
+            totalSpentInState += spendMoney
+            stateTotal.push(totalImpressionInState, totalSpentInState)
+        }
+    }
+    return stateTotal
+}
+
+
+
+app.get('/api/ads/totals', (req, res) => {
+
+
+})
+
+
+
 
 app.get('/api/ads/:state', (req, res) => {
     var array = []
@@ -86,55 +117,6 @@ app.get('/api/ads/:state', (req, res) => {
     res.send(array.flat())
 
 })
-
-app.get('/api/ads/totals/:state', (req, res) => {
-
-    // let totals = Object.entries(adTotals).forEach([key, value], index) => {
-    //     for (let j = 0; j < totals.length; i++){
-    //         totalImpressions += impressions
-    //     }
-    //     console.log(totals)
-    // })
-    var totalImpressions = 0
-
-    // for (const [index, [key, value]] of Object.entries(Object.entries(adTotals))) {
-    //     console.log(`${index}: ${key} = ${value}`)
-    // }
-
-//  Object.entries(adTotals).forEach(ad => {
-//         for (let j = 0; j < totals.length; j++){
-
-//             if (ad.impressions != null){
-//             totalImpressions += ad.impressions
-//             }
-//         }
-//         console.log(ad.impressions)
-//     })
-
-    // let totals = Object.entries(adTotals)
-    // console.log(totals)
-    // for(let j = 0; j < totals.length; j++) {
-    //     const isTotal = totals[i][0]
-    //     if (isTotal && isTotal.impressions != null){
-    //         totalImpressions += isTotal.impressions
-    //     }
-    // }
-
-
-    // for (let j = 0; j< totals.length; )j++){
-    //     const aState = totals[i][1].state
-    //     if (aState && aState === req.params.state) {
-
-    //     }
-    
-    // }
-//     res.send(totalImpressions)
-
-})
-
-
-
-
 
 
 app.get('/api/ads', (req, res) => {
