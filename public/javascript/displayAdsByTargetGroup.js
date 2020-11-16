@@ -74,34 +74,31 @@ blackPrideLink.addEventListener('click', (event) => {
         displayAd(res)
     })
 })
-if(req.params.profile == "blackPride"){
-    interests =  targetGroups.blackPowerInterests
-    likes = targetGroups.blackPowerLikes
-    culturalAfinity = targetGroups.blackPowerCulturalAfinity
-}else if(req.params.profile == "antiMuslim"){
-    interests = targetGroups.antiMuslimInterests
-    likes = targetGroups.antiMuslimLikes
-}else if(req.params.profile == "whitePride"){
-    interests = targetGroups.whiteNationalistInterests
-}else if(req.params.profile == "hispanics"){
-    interests = targetGroups.HispanicInterests
-}else if(req.params.profile == "lgbtq"){
-    interests = targetGroups.lgbtqInterests
-}else if(req.params.profile == "muslims"){
-    interests = targetGroups.muslimInterests
-}else if(req.params.profile == "incarcerated"){
-    interests = targetGroups.prisonersInterests
-}else if(req.params.profile == "gunOwners"){
-    interests = targetGroups.gunOwnersInterests
-}else if(req.params.profile == "libertarians"){
-    interests = targetGroups.libertariansInterests
-}
+
+
+
+
+
+
+
+
+
+
+// "blackPride"
+// "antiMuslim"
+// "whitePride"
+// "hispanics"
+// "lgbtq"
+// "muslims"
+// "incarcerated"
+// "gunOwners"
+// "libertarians"
 // else if(req.params.profile == "policeOfficers"){
 //     profile = targetGroups.policeForce
 // }
-"veterans"
-"leftWing"
+// "veterans"
+// "leftWing"
 
-"rightWing"
-"christians"
-"firstNations"
+// "rightWing"
+// "christians"
+// "firstNations"
