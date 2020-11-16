@@ -103,3 +103,8 @@ background-image: url("https://www.transparenttextures.com/patterns/handmade-pap
   height:30%; 
   width: 100%;
 }
+
+.card-scroll {
+  overflow-y: scroll;
+  height: 1000px;
+}
