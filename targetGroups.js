@@ -405,15 +405,15 @@ const firstNationInterests = [
 "Cherokee Nation"
 ];
 
-// module.exports = {
-//     blackPower,
-//     antiMuslim,
-//     whiteNationalist,
-//     hispanic,
-//     lgbtq,
-//     muslim,
-//     prisoners,
-//     GunOwners,
-//     libertarians,
-//     policeForce
-// }   
+module.exports = {
+    blackPower,
+    antiMuslim,
+    whiteNationalist,
+    hispanic,
+    lgbtq,
+    muslim,
+    prisoners,
+    GunOwners,
+    libertarians,
+    policeForce
+}   

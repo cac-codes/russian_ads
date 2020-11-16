@@ -7,7 +7,6 @@ const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
 const {adTotals} = require("./totals.js");
 const { test } = require('picomatch');
-const { adsForMurica } = require('./data.json')
 app.use(express.static('public'))
 
 
