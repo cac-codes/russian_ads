@@ -64,11 +64,9 @@ app.get('/api/:profile', (req, res) => {
         interests = targetGroups.gunOwnersInterests
     }else if(req.params.profile == "libertarians"){
         interests = targetGroups.libertariansInterests
-    }
-    // else if(req.params.profile == "policeOfficers"){
-    //     profile = targetGroups.policeForce
-    // }
-    else if(req.params.profile == "veterans"){
+    }else if(req.params.profile == "policeOfficers"){
+        interests = targetGroups.policeInterests
+    }else if(req.params.profile == "veterans"){
         interests = targetGroups.veteransInterests
     }else if(req.params.profile == "leftWing"){
         interests = targetGroups.leftWingInterests
@@ -82,7 +80,7 @@ app.get('/api/:profile', (req, res) => {
     }
 
     function adsByProfile(groupInterests, groupLikes){
-        // console.log(groupInterests)
+
         var ads = [];
         let data = Object.entries(allAdsUSA)
         for (let i = 0; i < data.length; i++){
@@ -154,11 +152,9 @@ app.get('/api/ads/:state/:profile', (req, res) => {
         interests = targetGroups.gunOwnersInterests
     }else if(req.params.profile == "libertarians"){
         interests = targetGroups.libertariansInterests
-    }
-    // else if(req.params.profile == "policeOfficers"){
-    //     profile = targetGroups.policeForce
-    // }
-    else if(req.params.profile == "veterans"){
+    }else if(req.params.profile == "policeOfficers"){
+        interests = targetGroups.policeInterests
+    }else if(req.params.profile == "veterans"){
         interests = targetGroups.veteransInterests
     }else if(req.params.profile == "leftWing"){
         interests = targetGroups.leftWingInterests

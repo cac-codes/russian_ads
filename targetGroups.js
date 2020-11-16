@@ -372,7 +372,7 @@ const policeForceJobtitle = [
     "Rear Admiral"
 
 ];
-const antPoliceInterests = [
+const policeInterests = [
     "Police",
     "Law Enforcement Today",
     "Fallen Police Officers",
@@ -418,6 +418,6 @@ module.exports = {
     gunOwnersInterests,
     libertariansInterests,
     policeForceJobtitle,
-    antPoliceInterests,
+    policeInterests,
     firstNationInterests
 }   
