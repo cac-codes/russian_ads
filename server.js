@@ -5,7 +5,8 @@ const {adsWithState} = require("./adsWithState.js")
 const {allAdsWithState} = require("./allAdsWithState.js")
 const {allAdsUSA} = require("./allAdsUSA.js")
 const targetGroups = require("./targetGroups.js")
-const {adTotals} = require("./totals.js")
+const {adTotals} = require("./totals.js");
+const { test } = require('picomatch');
 app.use(express.static('public'))
 
 app.get('/api/ads/:state/:profile', (req, res) => {
@@ -71,34 +72,42 @@ app.get('/api/ads/:state/:profile', (req, res) => {
 
 
 
-function totalForState(state){
+function totalForState(oneState){
     
-    var stateTotal = []
-    var totalImpressionInState = 0
-    var totalSpentInState = 0
+    var thisState = Object.entries(allAdsWithState)
+    var spendingTotal = 0
+    var impressionTotal = 0
+    var testSpendArray = []
+    thisState.forEach((element, index, array) => {
+ 
 
-    if (state === req.params.state){
+        const isState = element[1].state
 
-        var totalsData = Object.entriess(allAdsWithState)
-        var impression = totalsData[i][1].impressions
-        var spendMoney = totalsData[i][1].ad_spend
+        if (isState && isState === oneState) {
+            const stateSpend = element[1].ad_spend
+            const stateImpression = element[1].impressions
+            if (stateSpend && stateSpend > 0){
+            spendingTotal += stateSpend
+            }
+            impressionTotal += stateImpression
+        }   
+        
+    })
 
-        for (let i = 0; i < totalsData.length; i++){
-            totalImpressionInState += impression
-            totalSpentInState += spendMoney
-            stateTotal.push(totalImpressionInState, totalSpentInState)
-        }
-    }
-    return stateTotal
+
+    return new Array(spendingTotal, impressionTotal)
 }
 
 
 
-app.get('/api/ads/totals', (req, res) => {
+app.get('/api/totals/:state', (req, res) => {
 
-    totalForState(req.params.state)
-
-    res.send(totalForState)
+    var oneState = req.params.state
+    console.log("Test")
+  
+    totalForState(oneState)
+    
+    res.send(totalForState(oneState))
 })
 
 
