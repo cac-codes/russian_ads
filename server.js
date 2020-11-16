@@ -12,7 +12,7 @@ app.use(express.static('public'))
 
 app.get('/api/ads/:state', (req, res) => {
     var array = []
-
+    var totalsArray = []
     let data = Object.entries(allAdsWithState)
     for (let i = 0; i < data.length; i++){
         const isState = data[i][1].state
@@ -258,8 +258,14 @@ app.get('/api/totals/:state', (req, res) => {
     totalForState(oneState)
 
     
+<<<<<<< HEAD
     let result = totalForState(oneState)
     res.send(result)
+=======
+    res.send(totalForState(oneState))
+
+
+>>>>>>> sum count done
 })
 
 // endpoint maybe not reachable because of earlier endpoint using same route
@@ -274,6 +280,7 @@ app.get('/api/ads/:state', (req, res) => {
         }
     }
 
+ 
 
     res.send(array.flat())
 
