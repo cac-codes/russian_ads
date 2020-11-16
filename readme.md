@@ -19,15 +19,21 @@ The Mueller report in the USA outlined attempts by the Russian federation to int
 
 A visitor would be greeted by information on the advertisements targeted to the USA in general including: Total Ads Deployed, Total Rubles Paid to Facebook, and Total Impressions.
 
+
+The Mueller report in the USA outlined attempts by the Russian federation to interfere in the presidential elections of 2016. This took various forms, one arm of which was leveraging the power of social media, to wit facebook. The report traces and publishes various advertisements placed on facebook throught the election season by the mildly-named 'Internet Research Agency' operating from Moscow, over 3500 in total. Data about this was scraped by colleagues, converted into JSON format and placed into an API to which we made requests. 
+
 Subsequently users can interact with the map via hover and click functions which would import state-specific data. 
+
 
 An array of ads are displayed on the right-hand side of the page with options above for sorting by impressions from highest to lowest and cost of the ads in that category from highest to lowest
 
 Users can click on each individual ad, making the "card" flip to reveal specific information about the clicked ad. 
 
-3. Developement
+3. Development
 
-We utilised HTML, Javascript, CSS and libraries including D3 for data visualsation Planning was done on whimsical *** Workflow was organised on trello ***
+
+We utilised HTML, Javascript, CSS and libraries including D3 for data visualisation Planning was done on whimsical *** Workflow was organised on trello *** 
+
 
   <img src="/img/project3WireFrame.png" width="350" alt="accessibility text">
 

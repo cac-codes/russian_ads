@@ -48,3 +48,7 @@ path.faded-state {
 #DC.faded-state {
     opacity: 0.3;
 }
+
+.hidden-table {
+    visibility: hidden;
+}
