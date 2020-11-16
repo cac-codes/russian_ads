@@ -17,7 +17,7 @@ function displayAdverts(response) {
    
     if (number%2 ==!0 && response.data[number].image != null) {
       
-      console.log(response.data[number].interests)
+      console.log(response.data[number].ad_creation_date)
       //to grab ad_spend, ad_spend:, ad_spend_currency:, interests:, interests_also_match:, impressions
       let adSpend = response.data[number].ad_spend
       let impressions = response.data[number].impressions
