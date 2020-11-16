@@ -1,16 +1,5 @@
 
 
-
-
-
-
-// for flip cards on main page
-var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
-
-
 const infoTesting = {
   "data": {
   "likes_of_friends": null,
@@ -71,7 +60,7 @@ const infoTesting = {
   }
   }
 
-
+getAdvertRaw()
 
 var img =  infoTesting.data.cropped_image
 var location_test = infoTesting.data.location
