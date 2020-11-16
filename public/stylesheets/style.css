@@ -195,11 +195,17 @@ tr
     padding-bottom: 1rem;
     
   } 
-
-
   .demographic-title
   {
+    color: #F7BC87;
+    font-size: 2rem;
+    
+  } 
+
+  .demographic-result
+  {
     color: #232320;
+    font-size: 2rem;
     
   } 
   .filter-by 
