@@ -52,4 +52,4 @@ Throughout the development process, both teams would regularly collaborate in or
     - accounting for missing information from the original database. For example, when organizing by state, we found out that not every ad had a state listed. Some of the values within the original API had null values. 
 
 6. Lessons 
-    - how to solve 4. and 5. (see above)
+    - 
