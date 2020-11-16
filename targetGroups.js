@@ -51,7 +51,7 @@ const blackPowerCulturalAfinity = [
 const blackPowerExclude =[
     "Black guns matter",]
 
-const antiMuslim = [
+const antiMuslimInterests = [
     "Deportation",
 "Stop Illegal Immigration",
 "Immigration law",
@@ -120,10 +120,7 @@ const lgbtqInterests = [
     "Same-sex marriage in the United States", 
     "Transgenderism"
 ];
-const leftWingLikes = [
-    "Born Liberal",
-    "Watch the Police"
-];
+
 
 const leftWingInterests = [
     "Anarchism",
@@ -140,7 +137,12 @@ const leftWingInterests = [
 "Liberalism",
 ]
 
-const Veterans = [
+const leftWingLikes = [
+    "Born Liberal",
+    "Watch the Police"
+];
+
+const veteransInterests = [
 
     "Iraq and Afghanistan Veterans of America",
 "Vietnam Veterans of America Foundation",
@@ -279,7 +281,7 @@ const rightWingInterests = [
 
 
 
-const christianinterests = [
+const christianInterests = [
     "Martin Luther King, Jr.",
 "God",
 "Christian Church",
@@ -356,7 +358,7 @@ const libertariansInterests = [
 
 const policeForceJobtitle = [
 
-    "Polisi militer",
+"Polisi militer",
 "Soldado",
 "Retired Police Officer",
 "Officer",
@@ -379,8 +381,8 @@ const policeForceJobtitle = [
 "Rear Admiral"
 
 ];
-constantPoliceInterests = [
-    "Police",
+const PoliceInterests = [
+"Police",
 "Law Enforcement Today",
 "Fallen Police Officers",
 "Wives Behind the Badge, Inc.",
@@ -406,6 +408,7 @@ const firstNationInterests = [
 ];
 
 module.exports = {
+<<<<<<< HEAD
     blackPower,
     antiMuslim,
     whiteNationalist,
@@ -416,4 +419,29 @@ module.exports = {
     GunOwners,
     libertarians,
     policeForce
+=======
+    blackPowerCulturalAfinity,
+    blackPowerInterests,
+    blackPowerLikes,
+    PoliceInterests,
+    firstNationInterests,
+    libertariansInterests,
+    GunOwnersInterests,
+    prisonersInterests,
+    christianInterests,
+    rightWingInterests,
+    muslimInterests,
+    veteransInterests,
+    leftWingInterests,
+    blackPowerExclude,
+    policeForceJobtitle,
+    leftWingLikes,
+    gbtqInterests,
+    lgbtqInterests,
+    HispanicInterests,
+    antiMuslimInterests,
+    whiteNationalistInterests,
+    antiMuslimLikes
+    
+>>>>>>> organisation of targetGroup.js
 }   
