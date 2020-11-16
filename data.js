@@ -7,8 +7,6 @@ fs.readFile("data.json", function (error, content){
     var stateData = JSON.parse(content)
 
     stateData.data.forEach( ad => {
-        // console.log(ad.location)
-        // console.log(ad.location_living)
         if(ad.location_living != null){
             if(ad.location_living[0].country != undefined){
             var id = ad.ad_id
@@ -22,11 +20,9 @@ fs.readFile("data.json", function (error, content){
                 interests: ad.interests,
                 interests_also_match: ad.interests_also_match
             }
-            // console.log(ad.location_living[0].state)
             } 
         } else if(ad.location != null){
             if(ad.location[0].country != undefined){
-            // console.log(ad.location[0].state)
             var id = ad.ad_id
             allAdsUSA[id] = 
             {
@@ -34,9 +30,15 @@ fs.readFile("data.json", function (error, content){
                 city: ad.location[0].city,
                 image: ad.cropped_image,
                 ad_spend: ad.ad_spend,
+                ad_spend_currency: ad.ad_spend_currency,
                 impressions: ad.impressions,
                 interests: ad.interests,
-                interests_also_match: ad.interests_also_match
+                interests_also_match: ad.interests_also_match,
+                likes: ad.likes,
+                likes_exclude: ad.likes_exclude,
+                multicultural_affinity: ad.multicultural_affinity,
+                ad_creation_date: ad.ad_creation_date,
+                ad_end_date: ad.ad_end_date
             } 
         }} 
 
