@@ -377,7 +377,7 @@ const policeForceJobtitle = [
 "Rear Admiral"
 
 ];
-const PoliceInterests = [
+const policeInterests = [
 "Police",
 "Law Enforcement Today",
 "Fallen Police Officers",
