@@ -1,6 +1,6 @@
 var fs = require("fs")
 
-fs.readFile("data.json", function (error, content){
+fs.readFile("adsLeos.json", function (error, content){
     
     var allAdsUSA = {}
 

@@ -4,19 +4,18 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 html {
   height: 100vh;
 }
+
 body 
 {
-
   align-items: center;
   display: grid;
   justify-content: center;
-  background-color: #d53927;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallp  aper.png");
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
-
 
 h4 
 {
@@ -24,12 +23,10 @@ h4
 }
 
 /* header */
-
 .project-title-div 
 {
 position: relative;
 display: inline-block;
-background-color: #D53927 ;
 color: #F7BC87; ;
 height: 50rem;
 }
@@ -66,7 +63,7 @@ height: 50rem;
 
 .left-column
 {
-  background-color: #D53927 ;
+  /* background-color: #D53927 ; */
   color: #CCCCCB ;
   width: 50rem;
   display: grid;
@@ -84,7 +81,6 @@ height: 50rem;
 
 .location-info-section
 {
-  background-color: #D53927;
   height: 10rem;;
 }
 
@@ -151,7 +147,6 @@ height: 50rem;
 {
   display: grid;
   grid-template-columns: .5fr 1fr 1fr;
-  background-color: #D53927;
 
 
 }
@@ -183,7 +178,6 @@ tr
 
 .left-column-footer
 {
-  background-color: #D53927;
   height: 10rem;
 }
 
@@ -191,7 +185,6 @@ tr
 
 .right-column 
 {
-  background-color: #D53927;
   justify-content: center;
   }
 
@@ -237,10 +230,8 @@ tr
 .advert-container
 {
   display: grid;
-  /* grid-column-start: auto; */
   justify-content: start;
   max-width: max-content;
   padding-right: 2rem;
-  overflow: scroll
 }
 

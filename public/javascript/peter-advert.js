@@ -29,10 +29,10 @@ function displayAdverts(response, number) {
       }
         
       //grab the amount spent, impressionsm and currency
-
       let adSpend = response.data[number].ad_spend
       let impressions = response.data[number].impressions
       let currency = response.data[number].ad_spend_currency
+      
       //remove any dollar denominated data
       if (currency == "USD") {
         adSpend = adSpend * 77
@@ -44,13 +44,13 @@ function displayAdverts(response, number) {
       img.src = img_url
       img.classList.add("card")
       
-      numberstring = number.toString()
       //make our new elements divs, to host the image and append to our HTML parent advert-container
       adContainer1 = document.createElement("div")
       adContainer1.classList.add("scene") 
       adContainer1.classList.add("scene--card")
       adContainer1.dataset.impressions = impressions
       adContainer1.dataset.spend = adSpend
+
       adContainer2 = document.createElement("div")
       adContainer2.classList.add("card")
       adContainer2.addEventListener('click', function(event) {
@@ -60,6 +60,7 @@ function displayAdverts(response, number) {
       adContainer3 = document.createElement("div")
       adContainer3.classList.add("card__face")
       adContainer3.classList.add("card__face--front")
+      
       adContainer4 = document.createElement("div")
       adContainer4.classList.add("card__face")
       adContainer4.classList.add("card__face--back")
@@ -103,7 +104,7 @@ function getAdvertRaw () {
   axios.get(url).then(response => {
     for (var i = 0; i < 100; i++) {
       var number = Math.floor(Math.random()*3476)
-  
+      
       while (number%2 == 0) {
         number = Math.floor(Math.random()*3476)
       }

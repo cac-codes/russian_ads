@@ -20,7 +20,7 @@ filterByImpressions.addEventListener('click', (event) => {
 
     var ads = document.querySelectorAll('.scene--card')
     var sortedAds = [].slice.call(ads).sort(function (a,b) {
-        return  b.dataset.impressions -a.dataset.impressions
+        return  b.dataset.impressions - a.dataset.impressions
     })
     addSortedAds(sortedAds)
 })

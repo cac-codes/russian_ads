@@ -141,7 +141,6 @@ app.get('/api/:profile', (req, res) => {
     }
 
     res.send(adsByProfile(ads, interests, likes))
-    // res.send('')
 })
 
 app.get('/api/ads/:state/:profile', (req, res) => {
@@ -206,32 +205,6 @@ app.get('/api/totals/:state', (req, res) => {
     
     let result = totalForState(oneState)
     res.send(result)
-})
-
-// endpoint maybe not reachable because of earlier endpoint using same route
-app.get('/api/ads/:state', (req, res) => {
-    var array = []
-
-    let data = Object.entries(allAdsWithState)
-    for (let i = 0; i < data.length; i++){
-        const isState = data[i][1].state
-        if (isState && isState === req.params.state) {
-            array.push(data[i])
-        }
-    }
-
-    res.send(array.flat())
-
-})
-
-app.get('/api/ads', (req, res) => {
-    var allAds = [];
-    let data = Object.entries(allAdsUSA)
-    for (let i = 0; i < data.length; i++){
-            allAds.push(data[i])
-    }
-    console.log(data.length)
-    res.send(allAds.flat())
 })
 
 app.listen(4567, () => {
