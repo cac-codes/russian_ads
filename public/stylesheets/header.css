@@ -46,9 +46,19 @@ section h2
 {
     color: #232320;
     font-family: 'Nunito', sans-serif;
-   margin-left: 4rem;
-   rotate: none;
+    margin-left: 5rem;
+    font-size: .8em;
+    rotate: none;
+    width: 25%;
 }
+
+#subtext a {
+    color: #232320;
+}
+#subtext a:hover {
+    color: #F7BC87;
+}
+
 
     
 .titlecard 

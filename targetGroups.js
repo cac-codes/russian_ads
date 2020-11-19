@@ -121,10 +121,7 @@ const lgbtqInterests = [
     "Same-sex marriage in the United States", 
     "Transgenderism"
 ];
-const leftWingLikes = [
-    "Born Liberal",
-    "Watch the Police"
-];
+
 
 const leftWingInterests = [
     "Anarchism",
@@ -141,7 +138,13 @@ const leftWingInterests = [
     "Liberalism",
 ]
 
+const leftWingLikes = [
+    "Born Liberal",
+    "Watch the Police"
+];
+
 const veteransInterests = [
+
     "Iraq and Afghanistan Veterans of America",
     "Vietnam Veterans of America Foundation",
     "Veterans For America",
@@ -275,6 +278,8 @@ const rightWingInterests = [
     "Keep Texas Working",
 ];
 
+
+
 const christianInterests = [
     "Martin Luther King, Jr.",
 "God",
@@ -349,44 +354,44 @@ const libertariansInterests = [
 
 const policeForceJobtitle = [
 
-    "Polisi militer",
-    "Soldado",
-    "Retired Police Officer",
-    "Officer",
-    "Colonel",
-    "Major general (United States)",
-    "Master sergeant",
-    "Chief of police",
-    "Commander (United States)",
-    "Sergeant",
-    "Police commissioner",
-    "Brigadier general",
-    "Petty officer",
-    "Officer cadet",
-    "Sergeant Major of the Army",
-    "Lieutenant colonel (United States)",
-    "Chief petty officer",
-    "Lieutenant commander",
-    "Squadron leader",
-    "911 Dispatcher",
-    "Rear Admiral"
+"Polisi militer",
+"Soldado",
+"Retired Police Officer",
+"Officer",
+"Colonel",
+"Major general (United States)",
+"Master sergeant",
+"Chief of police",
+"Commander (United States)",
+"Sergeant",
+"Police commissioner",
+"Brigadier general",
+"Petty officer",
+"Officer cadet",
+"Sergeant Major of the Army",
+"Lieutenant colonel (United States)",
+"Chief petty officer",
+"Lieutenant commander",
+"Squadron leader",
+"911 Dispatcher",
+"Rear Admiral"
 
 ];
 const policeInterests = [
-    "Police",
-    "Law Enforcement Today",
-    "Fallen Police Officers",
-    "Wives Behind the Badge, Inc.",
-    "The Thin Blue Line",
-    "PoliceOne.com",
-    "Officer Down Memorial Page",
-    "National Law Enforcement Officers Memorial",
-    "Respect the Thin Blue line.",
-    "The Thin Blue Line (emblem)",
-    "Police Wives Unite",
-    "Police officer",
-    "National Police Wives Association",
-    "Heroes Behind The Badge"
+"Police",
+"Law Enforcement Today",
+"Fallen Police Officers",
+"Wives Behind the Badge, Inc.",
+"The Thin Blue Line",
+"PoliceOne.com",
+"Officer Down Memorial Page",
+"National Law Enforcement Officers Memorial",
+"Respect the Thin Blue line.",
+"The Thin Blue Line (emblem)",
+"Police Wives Unite",
+"Police officer",
+"National Police Wives Association",
+"Heroes Behind The Badge"
 ];
 
 const firstNationInterests = [
@@ -418,4 +423,4 @@ module.exports = {
     policeForceJobtitle,
     policeInterests,
     firstNationInterests
-}   
+}
