@@ -1,5 +1,4 @@
 
-
 const infoTesting = {
   "data": {
   "likes_of_friends": null,
@@ -60,7 +59,7 @@ const infoTesting = {
   }
   }
 
-getAdvertRaw()
+displayAdverts()
 
 var img =  infoTesting.data.cropped_image
 var location_test = infoTesting.data.location
