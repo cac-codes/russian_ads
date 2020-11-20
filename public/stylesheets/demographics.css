@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* background-color: #D53927; */
 }
 
 .demographic  a
@@ -17,8 +16,7 @@
   text-decoration: none;
 }
   
-  /* Change the link color on hover */
-
+/* Change the link color on hover */
 .demographic  a:hover 
 {
   background-color: #520b0b;
