@@ -1,49 +1,45 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+
 /* filter advertisments navbar  */
-.filter-nav
-{
+.filter-nav {
   color: #F7BC87;
   font-family: 'Nunito', sans-serif;
 }
-ul 
-{
+
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #D53927;
+  /* background-color: #D53927; */
 }
-li 
-{
+
+li {
   float: left;
 }
-li a
-{
+
+li a {
   display: block;
   color:  #F7BC87;
   text-align: center;
   padding: 1rem 1rem;
   text-decoration: none;
 }
-  /* Change the link color on hover */
-li a:hover 
-{
+
+/* Change the link color on hover */
+li a:hover {
   background-color: #520b0b;
   -webkit-transition: background-color 0.5s ease-out;
     -moz--transition: background-color 0.5s ease-out;
     -o-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
 }
-body
-{  
+
+body {  
  color: #F7BC87;
  font-family: 'Nunito', sans-serif;
  font-size: 1rem;
 }
+
 .scene {
   width: 300px;
   height: 400px;
@@ -51,6 +47,7 @@ body
   perspective: 600px;
   padding: .5rem;
 }
+
 .card {
   width: 100%;
   height: 100%;
@@ -60,18 +57,19 @@ body
   position: relative;
   filter: grayscale(100%) contrast(160%) sepia(.60) ;
 }
-.card:hover 
-{
+
+.card:hover {
   filter: none;
 }
+
 .card.is-flipped {
   transform: rotateY(-180deg);
 }
+
 .card__face {
   position: absolute;
   width: 100%;
   height: 100%;
-  line-height: 260px;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -79,20 +77,25 @@ body
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.card__face--front {
-  background: #92271b;
-}
+
 .card__face--back {
   background: #f7bc87;
   transform: rotateY(-180deg);
+  display: grid;
+  align-items: center;
+  padding: 1rem;
 }
+
 .back-card-info {
-  height: 5px;
   font-size: 1rem ;
   text-align: left;
-  margin: 1rem;
-  word-wrap: break-word;
 }
+
+.back-card-info p {
+  margin: .3rem;
+}
+
+/* Scroll bar */
 .card-scroll {
   overflow-y: scroll;
   overflow-x: none;

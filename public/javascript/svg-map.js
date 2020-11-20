@@ -159,9 +159,7 @@ function hoverHighlight(el) {
         let stateTargetedSpend = 1428202;
         totalTargeted.textContent = `${(countryWideAds - stateTargetedAds) + adCount}`;
         document.querySelector(".location-spent-result").parentElement.classList.add("hidden-table");        
-        // document.querySelector(".location-spent-result").textContent = `${totalSpent}`;
         document.querySelector(".location-impressions-result").parentElement.classList.add("hidden-table");
-        // document.querySelector(".location-impressions-result").textContent = impressions
     })
 }
 
@@ -186,24 +184,6 @@ function fadeStates(el) {
     adsByTarget(state);
 }
 
-// reset
-function resetAdsByTarget() {
-    whitePrideData.textContent = "-"
-    blackPrideData.textContent = "-"
-    antiMuslimData.textContent = "-"
-    hispanicData.textContent = "-"
-    lgbtqData.textContent = "-"
-    firstNationsData.textContent = "-"
-    farRightData.textContent = "-"
-    muslimsData.textContent = "-"
-    incarceratedData.textContent = "-"
-    gunOwnersData.textContent = "-"
-    libertariansData.textContent = "-"
-    policeData.textContent = "-"
-    veteransData.textContent = "-"
-    christiansData.textContent = "-"
-}
-
 // add event listeners to state elements
 svgStates.forEach((el) => {
     el.addEventListener("mouseenter", ()=> {
@@ -220,7 +200,6 @@ svgStates.forEach((el) => {
 // reset USA/state header and total ad/rub/impressions when mouse leaves map
 svgMap.addEventListener("mouseleave", () => {
     mapHeader.textContent = "USA";
-    resetAdsByTarget();
     totalTargeted.textContent = '3476';
     document.querySelector(".location-spent-result").textContent = '5848355';
     document.querySelector(".location-impressions-result").textContent = '39601632';

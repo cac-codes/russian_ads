@@ -5,14 +5,8 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #D53927;
 }
-  
-/* li 
-{
-  float: left;
-} */
-  
+
 .demographic  a
 {
   display: block;
@@ -22,15 +16,16 @@
   text-decoration: none;
 }
   
-  /* Change the link color on hover */
-
+/* Change the link color on hover */
 .demographic  a:hover 
 {
   background-color: #520b0b;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+
   -webkit-transition: background-color 0.5s ease-out;
-    -moz--transition: background-color 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out;
-    transition: background-color 0.5s ease-out;
+  -moz--transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
  /* barcharts */
