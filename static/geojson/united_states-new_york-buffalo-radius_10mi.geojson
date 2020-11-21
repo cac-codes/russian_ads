@@ -1,0 +1,17 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Circle",
+            "radius": 8098.008971803145,
+            "name": "Unnamed Layer",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-78.863691, 42.892567]
+        },
+        "id": "b09c6599-c247-4a81-8a67-455297853927"
+    }]
+}

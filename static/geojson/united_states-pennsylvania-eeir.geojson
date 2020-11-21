@@ -1,0 +1,27 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Pennsylvania, Eerie",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-80.134277, 42.116561],
+                    [-80.105438, 42.067136],
+                    [-80.012054, 42.110449],
+                    [-80.045013, 42.148642],
+                    [-80.064926, 42.14406],
+                    [-80.077972, 42.150678],
+                    [-80.088272, 42.148133],
+                    [-80.085526, 42.139478],
+                    [-80.134277, 42.116561]
+                ]
+            ]
+        }
+    }]
+}

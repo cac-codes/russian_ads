@@ -1,0 +1,24 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Pennsylvania, Allentown",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-75.476418, 40.646783],
+                    [-75.576324, 40.609261],
+                    [-75.556068, 40.576673],
+                    [-75.505257, 40.564677],
+                    [-75.432816, 40.556852],
+                    [-75.476418, 40.646783]
+                ]
+            ]
+        }
+    }]
+}

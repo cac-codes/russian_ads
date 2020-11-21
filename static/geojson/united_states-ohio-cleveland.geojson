@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Ohio, Cleveland",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-81.744461, 41.486463],
+                    [-81.705494, 41.466657],
+                    [-81.681461, 41.470001],
+                    [-81.629791, 41.498164],
+                    [-81.641808, 41.536595],
+                    [-81.66069, 41.527857],
+                    [-81.667213, 41.530941],
+                    [-81.744461, 41.486463]
+                ]
+            ]
+        }
+    }]
+}

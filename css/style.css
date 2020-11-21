@@ -1,0 +1,240 @@
+* 
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body 
+{
+
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  background-color: #d53927;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallp  aper.png");
+}
+
+h4 
+{
+  color: #232320 
+}
+
+/* header */
+
+.project-title-div 
+{
+position: relative;
+display: inline-block;
+background-color: #D53927 ;
+color: #F7BC87; ;
+height: 50rem;
+}
+
+.titlecard 
+{
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 6rem;
+  transform: rotate(-90deg);
+  transform-origin: 20% 100%;
+
+}
+
+.overlayed-hand
+{
+  position: absolute;
+  transform: rotate(-30deg);
+  transform-origin: 60% -200%;
+  width: 70rem;
+  background-color: transparent;
+ }
+
+
+
+.main_container 
+{
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    justify-content: center;
+}
+
+/* left side */
+
+.left-column
+{
+  background-color: #D53927 ;
+  color: #CCCCCB ;
+  width: 80rem;
+  display: grid;
+  justify-content: center;
+}
+
+.map-container 
+{
+
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+
+.location-info-section
+{
+  background-color: #D53927;
+  height: 14rem;;
+}
+
+.location-info-name {
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 6rem;
+  font-style: inherit;
+  margin-bottom: -1rem;
+}
+
+.location-info-deployed {
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  padding-bottom: 4rem;
+  
+} 
+
+.location-deployed-result
+{
+  padding-right: 1rem;
+  text-align: left;
+  color: #232320;
+}
+
+
+.location-info-spent {
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  padding-bottom: 4rem;
+  
+} 
+
+.location-spent-result
+{
+  
+  text-align: left;
+  color: #232320;
+}
+
+.with 
+{
+  padding-right: 1rem;
+  text-align: left
+}
+.paid 
+{
+  padding-left: 1rem;
+  text-align: right
+}
+
+
+
+.target-groups-section 
+{
+  display: grid;
+  grid-template-columns: .5fr 1fr 1fr;
+  background-color: #D53927;
+
+
+}
+
+
+
+.target-column-left, .target-column-right
+{
+  list-style-type: none;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result 
+{
+  text-align: left;
+  color: #232320;
+}
+
+tr 
+{
+  margin-bottom: 1rem;
+}
+
+.left-column-footer
+{
+  background-color: #D53927;
+  height: 10rem;
+}
+
+/* right side */
+
+.right-column 
+{
+  background-color: #D53927;
+  justify-content: center;
+  }
+
+  .array-title
+  {
+    color: #F7BC87;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+    
+  } 
+  .demographic-title
+  {
+    color: #F7BC87;
+    font-size: 2rem;
+    
+  } 
+
+  .demographic-result
+  {
+    color: #232320;
+    font-size: 2rem;
+    
+  } 
+  .filter-by 
+  {
+    padding-right: 1rem;
+    text-align: left;
+  }
+
+.advert-filter-div
+{
+  margin-top: .5rem;
+  margin-right: .5rem;
+  color: #F7BC87;
+  font-family: 'Nunito', sans-serif;
+  text-align: right;
+  font-size: 1rem;
+}
+
+
+.advert-container
+{
+  display: grid;
+  grid-column-start: auto;
+  justify-content: start;
+  max-width: max-content;
+  padding-right: 2rem;
+  overflow: scroll
+}
+

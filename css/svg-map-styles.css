@@ -1,0 +1,50 @@
+.svg-states {
+    width: 70rem;
+}
+
+path {
+    -webkit-transition: opacity 1s ease-out;
+    -moz--transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
+
+path.on {
+    fill: #520b0b ;
+    -webkit-transition: fill 0.5s ease-out;
+    -moz--transition: fill 0.5s ease-out;
+    -o-transition: fill 0.5s ease-out;
+    transition: fill 0.5s ease-out;
+}
+
+path.highlight-state {
+    fill: #232320 ;
+}
+
+path.faded-state {
+    opacity: 0.3;
+}
+
+/* dc circle styles */
+#DC {
+    -webkit-transition: opacity 1s ease-out;
+    -moz--transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
+
+#DC.on {
+    fill: #520b0b ;
+    -webkit-transition: fill 0.5s ease-out;
+    -moz--transition: fill 0.5s ease-out;
+    -o-transition: fill 0.5s ease-out;
+    transition: fill 0.5s ease-out;
+}
+
+#DC.highlight-state {
+    fill: #232320 ;
+}
+
+#DC.faded-state {
+    opacity: 0.3;
+}

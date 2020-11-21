@@ -1,0 +1,24 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Delaware, Wilmington",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-75.632629, 39.732538],
+                    [-75.538559, 39.688695],
+                    [-75.510406, 39.719863],
+                    [-75.483627, 39.772131],
+                    [-75.560532, 39.800096],
+                    [-75.632629, 39.732538]
+                ]
+            ]
+        }
+    }]
+}

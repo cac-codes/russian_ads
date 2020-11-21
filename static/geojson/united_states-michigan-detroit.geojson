@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Michigan, Detroit",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-83.20118, 42.468805],
+                    [-83.196716, 42.3352],
+                    [-83.099213, 42.289501],
+                    [-83.047028, 42.322001],
+                    [-82.909698, 42.369706],
+                    [-82.871246, 42.443728],
+                    [-82.891846, 42.470071],
+                    [-83.20118, 42.468805]
+                ]
+            ]
+        }
+    }]
+}

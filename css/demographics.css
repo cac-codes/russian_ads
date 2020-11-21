@@ -1,0 +1,36 @@
+
+.demographic 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D53927;
+}
+  
+/* li 
+{
+  float: left;
+} */
+  
+.demographic  a
+{
+  display: block;
+  color:  #F7BC87;
+  text-align: left;
+  padding: .5rem .5rem;
+  text-decoration: none;
+}
+  
+  /* Change the link color on hover */
+
+.demographic  a:hover 
+{
+  background-color: #520b0b;
+  -webkit-transition: background-color 0.5s ease-out;
+    -moz--transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+
+ /* barcharts */

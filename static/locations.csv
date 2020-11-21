@@ -1,0 +1,187 @@
+country,state,city,latitude,longitude,radius,radius_units,geometry
+United States,,,,,,,united_states.geojson
+United States,New York,Astoria,,,25,mi,united_states-new_york-astoria-radius_25mi.geojson
+United States,New York,New York,,,25,mi,united_states-new_york-new_york-radius_25mi.geojson
+United States,New York,New York,,,,,united_states-new_york-new_york.geojson
+United States,California,Palo Alto,,,10,mi,united_states-california-palo_alto-radius_10mi.geojson
+United Kingdom,,,,,,,united_kingdom.geojson
+United States,Mississippi,Jackson,,,17,km,united_states-mississippi-jackson-radius_17km.geojson
+United States,New York,,,,,,united_states-new_york.geojson
+United States,New York,New York,,,40,km,united_states-new_york-new_york-radius_40km.geojson
+United States,Mississippi,Jackson,,,20,mi,united_states-mississippi-jackson-radius_20mi.geojson
+United States,New York,Buffalo,,,12,mi,united_states-new_york-buffalo-radius_12mi.geojson
+United States,California,San Francisco,,,40,km,united_states-california-san_francisco-radius_40km.geojson
+United States,Mississippi,Jackson,,,20,km,united_states-mississippi-jackson-radius_20km.geojson
+United States,New York,Buffalo,,,10,mi,united_states-new_york-buffalo-radius_10mi.geojson
+United States,Arizona,Glendale,,,10,mi,united_states-arizona-glendale-radius_10mi.geojson
+United States,New York,New York,,,20,km,united_states-new_york-new_york-radius_20km.geojson
+United States,Texas,Austin,,,10,mi,united_states-texas-austin-radius_10mi.geojson
+United States,Maryland,Baltimore,,,40,km,united_states-maryland-baltimore-radius_40km.geojson
+United States,New York,New York,40.73,-73.99,42,km,united_states-new_york-new_york-lat_40p73-lon_n73p99-radius_42km.geojson
+United States,Connecticut,,,,,,united_states-connecticut.geojson
+United States,Delaware,,,,,,united_states-delaware.geojson
+United States,Maine,,,,,,united_states-maine.geojson
+United States,Maryland,,,,,,united_states-maryland.geojson
+United States,Massachusetts,,,,,,united_states-massachuesetts.geojson
+United States,Missouri,Ferguson,,,40,km,united_states-missouri-ferguson-radius_40km.geojson
+United States,Nevada,Virginia City,,,40,km,united_states-nevada-virginia_city-radius_40km.geojson
+United States,New Hampshire,,,,,,united_states-new_hampshire.geojson
+United States,New Jersey,,,,,,united_states-new_jersey.geojson
+United States,Ohio,,,,,,united_states-ohio.geojson
+United States,Pennsylvania,,,,,,united_states-pennsylvania.geojson
+United States,Rhode Island,,,,,,united_states-rhode_island.geojson
+United States,Vermont,,,,,,united_states-vermont.geojson
+United States,Louisiana,New Orleans,,,40,km,united_states-louisiana-new_orleans-radius_40km.geojson
+United States,Maryland,Baltimore,,,,,united_states-maryland-baltimore.geojson
+United States,Missouri,Ferguson,,,,,united_states-missouri-ferguson.geojson
+United States,Missouri,St. Louis,,,,,united_states-missouri-st_louis.geojson
+United States,Ohio,Cleveland,,,,,united_states-ohio-cleveland.geojson
+United States,Maryland,Baltimore,,,20,km,united_states-maryland-baltimore-radius_20km.geojson
+United States,Missouri,St. Louis,,,20,km,united_states-missouri-st_louis-radius_20km.geojson
+United States,Texas,,,,,,united_states-texas.geojson
+United States,Georgia,Atlanta,,,25,mi,united_states-georgia-atlanta-radius_25mi.geojson
+United States,Louisiana,New Orleans,,,50,mi,united_states-louisiana-new_orleans-radius_50mi.geojson
+United States,Maryland,Baltimore,,,50,mi,united_states-maryland-baltimore-radius_50mi.geojson
+United States,California,Oakland,,,50,mi,united_states-california-oakland-radius_50mi.geojson
+United States,Missouri,Ferguson,,,50,mi,united_states-missouri-ferguson-radius_50mi.geojson
+United States,Missouri,St. Louis,,,50,mi,united_states-missouri-st_louis-radius_50mi.geojson
+United States,Wisconsin,Milwaukee,,,25,mi,united_states-wisconsin-milwaukee-radius_25mi.geojson
+United States,California,Oakland,,,25,mi,united_states-california-oakland-radius_25mi.geojson
+United States,Louisiana,New Orleans,,,25,mi,united_states-louisiana-new_orleans-radius_25mi.geojson
+United States,Maryland,Baltimore,,,25,mi,united_states-maryland-baltimore-radius_25mi.geojson
+United States,Missouri,Ferguson,,,25,mi,united_states-missouri-ferguson-radius_25mi.geojson
+United States,Missouri,St. Louis,,,25,mi,united_states-missouri-st_louis-radius_25mi.geojson
+United States,Pennsylvania,Philadelphia,,,25,mi,united_states-pennsylvania-philadelphia-radius_25mi.geojson
+United States,Georgia,Atlanta,,,20,km,united_states-georgia-atlanta-radius_20km.geojson
+United States,Virginia,,,,,,united_states-virginia.geojson
+Russia,,,,,,,russia.geojson
+United States,Louisiana,Baton Rouge,,,25,mi,united_states-louisiana-baton_rouge-radius_25mi.geojson
+United States,New Jersey,Cambden,,,25,mi,united_states-new_jersey-cambden-radius_25mi.geojson
+United States,New Jersey,Newark,,,25,mi,united_states-new_jersey-newark-radius_25mi.geojson
+United States,Ohio,Cleveland,,,25,mi,united_states-ohio-cleveland-radius_25mi.geojson
+United States,Pennsylvania,Chester,,,25,mi,united_states-pennsylvania-chester-radius_25mi.geojson
+United States,Missouri,Ferguson,,,20,km,united_states-missouri-ferguson-radius_20km.geojson
+United States,Virginia,Richmond,,,20,km,united_states-virginia-richmond-radius_20km.geojson
+United States,Arkansas,Chester,,,20,km,united_states-pennsylvania-chester-radius_20km.geojson
+United States,District of Columbia,Washington,,,20,km,united_states-district_of_columbia-washington-radius_20km.geojson
+United States,Louisiana,New Orleans,,,20,km,united_states-louisiana-new_orleans-radius_20km.geojson
+United States,Ohio,Cleveland,,,20,km,united_states-ohio-cleveland-radius_20km.geojson
+United States,Pennsylvania,Philadelphia,,,20,km,united_states-pennsylvania-philadelphia-radius_20km.geojson
+United States,Tennessee,Memphis,,,20,km,united_states-tennessee-memphis-radius_20km.geojson
+United States,Wisconsin,Milwaukee,,,20,km,united_states-wisconsin-milwaukee-radius_20km.geojson
+United States,Washington,,,,,,united_states-washington.geojson
+United States,Illinois,Chicago,41.88,-87.71,16,km,united_states-illinois-chicago-lat_41p88-lon_n87p71-radius_16km.geojson
+United States,Illinois,Chicago Heights,,,40,km,united_states-illinois-chicago_heights-radius_40km.geojson
+United States,Illinois,Des Plaines,42.01,-87.91,16,km,united_states-illinois-des_plaines-lat_42p01-lon_n87p91-radius_16km.geojson
+United States,Illinois,Naperville,41.69,-88.19,16,km,united_states-illinois-naperville-lat_41p69-lon_n88p19-radius_16km.geojson
+United States,Illinois,Wheaton,41.88,-88.11,16,km,united_states-illinois-wheaton-lat_41p88-lon_n88p11-16km.geojson
+United States,Louisiana,,,,,,united_states-louisiana.geojson
+United States,Illinois,Chicago,,,40,km,united_states-illinois-chicago-radius_40km.geojson
+United States,District of Columbia,Washington,38.89,-77.03,16,km,united_states-distict_of_columbia-washington-lat_38p89-lon_n77p03-radius_16km.geojson
+United States,New Mexico,Gallup,,,40,km,united_states-new_mexico-gallup-radius_40km.geojson
+United States,Oklahoma,,,,,,united_states-oklahoma.geojson
+United States,Ohio,Cleveland,,,50,km,united_states-ohio-cleveland-radius_50km.geojson
+Germany,,,,,,,germany.geojson
+France,,,,,,,france.geojson
+United States,Georgia,Atlanta,,,40,km,united_states-georgia-atlanta-radius_40km.geojson
+United States,Louisiana,Baton Rouge,,,40,km,united_states-louisiana-baton_rouge-radius_40km.geojson
+United States,Texas,Austin,,,40,km,united_states-texas-austin-radius_40km.geojson
+United States,Texas,Houston,,,40,km,united_states-texas-houston-radius_40km.geojson
+United States,Virginia,Richmond,,,40,km,united_states-virginia-richmond-radius_40km.geojson
+Canada,,,,,,,canada.geojson
+United States,New Mexico,,,,,,united_states-new_mexico.geojson
+United States,North Carolina,,,,,,united_states-north_carolina.geojson
+United States,South Carolina,,,,,,united_states-south_carolina.geojson
+United States,Georgia,Atlanta,,,50,km,united_states-georgia-atlanta-radius_50km.geojson
+United States,California,Lancaster,,,25,mi,united_states-california-lancaster-radius_25mi.geojson
+United States,California,San Francisco,,,25,mi,united_states-california-san_francisco-radius_25mi.geojson
+United States,Wisconsin,Madison,,,25,mi,united_states-wisconsin-madison-radius_25mi.geojson
+United States,New York,Buffalo,,,50,mi,united_states-new_york-buffalo-radius_50mi.geojson
+United States,Minnesota,,,,,,united_states-minnesota.geojson
+United States,Arkansas,,,,,,united_states-arkansas.geojson
+United States,Mississippi,,,,,,united_states-mississippi.geojson
+United States,West Virginia,,,,,,united_states-west_virginia.geojson
+United States,Pennsylvania,Harrisburg,,,,,united_states-pennsylvania-harrisburg.geojson
+United States,New York,Buffalo,,,14,mi,united_states-new_york-buffalo-radius_14mi.geojson
+United States,Texas,Abilene,,,30,mi,united_states-texas-abilene-radius_30mi.geojson
+United States,Texas,Bryan,,,33,mi,united_states-texas-bryan-radius_33mi.geojson
+United States,Texas,Houston,,,34,mi,united_states-texas-houston-radius_34mi.geojson
+United States,Texas,South Plains,,,36,mi,united_states-texas-south_plains-radius_36mi.geojson
+Turkmenistan,,,,,,,turkmenistan.geojson
+United States,Georgia,Atlanta,,,,,united_states-georgia-atlanta.geojson
+United States,Michigan,Detroit,,,,,united_states-michigan-detroit.geojson
+Netherlands,,,,,,,netherlands.geojson
+United States,District of Columbia,Washington,,,50,mi,united_states-district_of_columbia-washington-radius_50mi.geojson
+United States,Delaware,Wilmington,,,,,united_states-delaware-wilmington.geojson
+United States,Illinois,,,,,,united_states-illinois.geojson
+United States,California,,,,,,united_states-california.geojson
+United States,Ohio,Cleveland,,,40,km,united_states-ohio-cleveland-radius_40km.geojson
+United States,New York,Staten Island,,,,,united_states-new_york-staten_island.geojson
+United States,Minnesota,Minneapolis,,,25,mi,united_states-minnesota-minneapolis-radius_25mi.geojson
+United States,Kansas,,,,,,united_states-kansas.geojson
+United States,Michigan,Detroit,,,70,km,united_states-michigan-detroit-radius_70km.geojson
+United States,Georgia,,,,,,united_states-georgia.geojson
+United States,Nebraska,,,,,,united_states-nebraska.geojson
+United States,Pennsylvania,Philadelphia,,,,,united_states-pennsylvania-philadelphia.geojson
+United States,Arizona,,,,50,mi,united_states-arizona-radius_50mi.geojson
+China,,,,,,,china.geojson
+United States,Idaho,,,,,,united_states-idaho.geojson
+United States,Texas,Amarillo,,,30,mi,united_states-texas-amarillo-radius_30mi.geojson
+United States,Texas,Conroe,,,31,mi,united_states-texas-conroe-radius_31mi.geojson
+United States,Texas,Lubbock,,,32,mi,united_states-texas-lubbock-radius_32mi.geojson
+United States,Texas,Temple,,,35,mi,united_states-texas-temple-radius_35mi.geojson
+United States,Michigan,Detroit,,,40,km,united_states-michigan-detroit-radius_40km.geojson
+United States,Arizona,,,,,,united_states-arizona.geojson
+United States,Ohio,Cleveland,,,34,mi,united_states-ohio-cleveland-radius_34mi.geojson
+United States,Georgia,Atlanta,,,50,mi,united_states-georgia-atlanta-radius_50mi.geojson
+United States,California,Los Angeles,,,25,mi,united_states-california-los_angeles-radius_25mi.geojson
+United States,Michigan,Detroit,,,20,km,united_states-michigan-detroit-radius_20km.geojson
+United States,Iowa,,,,,,united_states-iowa.geojson
+Georgia,,,,,,,georgia.geojson
+United States,Pennsylvania,Allentown,,,,,united_states-pennsylvania-allentown.geojson
+United States,Tennessee,,,,,,united_states-tennessee.geojson
+United States,New York,New York,,,50,mi,united_states-new_york-new_york-radius_50mi.geojson
+United States,Texas,Beaumont,,,31,mi,united_states--texas-beaumont-radius_31mi.geojson
+United States,Texas,Dallas,,,33,mi,united_states-texas-dallas-radius_33mi.geojson
+United States,Texas,San Angelo,,,39,mi,united_states-texas-san_angelo-radius_39mi.geojson
+United States,Texas,Tyler,,,35,mi,united_states-texas-tyler-radius_35mi.geojson
+United States,Texas,Houston,,,50,mi,united_states-texas-houston-radius_50mi.geojson
+United States,Michigan,,,,,,united_states-michigan.geojson
+United States,North Carolina,Charlotte,,,25,mi,united_states-north_carolina-charlotte-radius_25mi.geojson
+United States,New York,Rochester,,,50,mi,united_states-new_york-rochester-radius_50mi.geojson
+United States,Alabama,,,,,,united_states-alabama.geojson
+United States,Texas,Houston,,,10,mi,united_states-texas-houston-radius_10mi.geojson
+United States,Pennsylvania,Erie,,,,,united_states-pennsylvania-eeir.geojson
+United States,New York,Astoria,,,50,mi,united_states-new_york_astoria-radius_50mi.geojson
+United States,California,Long Beach,,,25,mi,united_states-california-long_beach-radius_25mi.geojson
+United States,Michigan,Detroit,,,35,mi,united_states-michigan-detroit-radius_35mi.geojson
+United States,New York,New York,,,37,mi,united_states-new_york-new_york-radius_37mi.geojson
+United States,Texas,Brownwood,,,32,mi,united_states-texas-brownwood-radius_32mi.geojson
+United States,Texas,Fort Worth,,,33,mi,united_states-texas-fort_worth-radius_33mi.geojson
+United States,Texas,San Antonio,,,28,mi,united_states-texas-san_antonio-radius_28mi.geojson
+United States,Texas,Waco,,,39,mi,united_states-texas-waco-radius_39mi.geojson
+United States,Michigan,Detroit,,,50,mi,united_states-michigan-detroit-radius_50mi.geojson
+United States,Wisconsin,,,,,,united_states-wisconsin.geojson
+United States,Illinois,Chicago,,,10,mi,united_states-illinois-chicago-radius_10mi.geojson
+United States,Florida,Orlando,,,50,mi,united_states-florida-orlando-radius_50mi.geojson
+United States,Pennsylvania,Pittsburgh,,,,,united_states-pennsylvania-pittsburgh.geojson
+United States,Arizona,,,,25,mi,united_states-arizona-radius_25mi.geojson
+United States,Pennsylvania,Scranton,,,,,united_states-pennsylvania-scranton.geojson
+United States,California,Los Angeles,,,40,km,united_states-california-los_angeles-radius_40km.geojson
+United States,Florida,Gainesville,,,25,mi,united_states-florida-gainesville-radius_25mi.geojson
+United States,Texas,Austin,,,35,mi,united_states-texas-austin-radius_35mi.geojson
+United States,Texas,Corpus Christi,,,31,mi,united_states-texas-corpus_christi-radius_31mi.geojson
+United States,Texas,Odessa,,,33,mi,united_states-texas-odessa-radius_33mi.geojson
+United States,Texas,Texas City,,,35,mi,united_states-texas-texas_city-radius_35mi.geojson
+United States,Florida,,,,,,united_states-florida.geojson
+United States,Minnesota,Minneapolis,,,50,mi,united_states-minnesota-minneapolis-radius_50mi.geojson
+United States,Florida,Tampa,,,25,mi,united_states-florida-tampa-radius_25mi.geojson
+United States,Maryland,Baltimore,,,17,km,united_states-maryland-baltimore-radius_17km.geojson
+United States,New York,New York,,,10,mi,united_states-new_york-radius_10mi.geojson
+United States,California,Oakland,,,,,united_states-california-oakland.geojson
+United States,South Carolina,Charleston,,,70,km,united_states-south_carolina-charleston-radius_70km.geojson
+United States,Florida,Orlando,,,25,mi,united_states-florida-orlando-radius_25mi.geojson
+United States,Ohio,Cleveland,,,50,mi,united_states-ohia-cleveland-radius_50mi.geojson
+United States,Michigan,Lansing,,,25,mi,united_states-michigan-lansing-radius_25mi.geojson
+United States,District of Columbia,Washington,,,40,km,united_states-district_of_columbia-washington-radius_40km.geojson
+United States,California,Los Angeles,,,50,mi,united_states-california-los_angeles-radius_50mi.geojson

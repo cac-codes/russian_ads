@@ -1,0 +1,23 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "shape": "Polygon",
+            "name": "United States, Missouri, Ferguson",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-90.333366, 38.773358],
+                    [-90.325298, 38.728912],
+                    [-90.25732, 38.707884],
+                    [-90.255947, 38.770815],
+                    [-90.333366, 38.773358]
+                ]
+            ]
+        }
+    }]
+}
