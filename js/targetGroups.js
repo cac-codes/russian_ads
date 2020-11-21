@@ -32,16 +32,18 @@ const blackPowerInterests = [
     "Martin Luther King, Jr.",
     "Huey P. Newton",
     "Black Power",
-"Fight the Power",
-"Black history",
-"My Black is Beautiful",
-"Black History Month",
-"Black is beautiful",
-"Black Girls Rock!"
+    "Fight the Power",
+    "Black history",
+    "My Black is Beautiful",
+    "Black History Month",
+    "Black is beautiful",
+    "Black Girls Rock!",
     
 ];  
 
-const blackPowerLikes = [ "Don't Shoot"];
+const blackPowerLikes = [ 
+    "Don't Shoot"
+];
 
 const blackPowerCulturalAfinity = [
     "African American (US)"
@@ -49,14 +51,15 @@ const blackPowerCulturalAfinity = [
 
 ///this is black gun lovers///
 const blackPowerExclude =[
-    "Black guns matter",]
+    "Black guns matter"
+]
 
 const antiMuslimInterests = [
     "Deportation",
-"Stop Illegal Immigration",
-"Immigration law",
-"Supporting Our Veterans",
-"Illegal immigration",
+    "Stop Illegal Immigration",
+    "Immigration law",
+    "Supporting Our Veterans",
+    "Illegal immigration",
 ];
 
 const antiMuslimLikes = [
@@ -80,11 +83,10 @@ const whiteNationalistInterests = [
     "American Civil War",
     "South United",
     "Flags of the Confederate States of America",
-"Hart of Dixie",
-"Mud & Trucks",
-"Dixie",
-"Confederate States of America",
-
+    "Hart of Dixie",
+    "Mud & Trucks",
+    "Dixie",
+    "Confederate States of America",
 ];
 const HispanicInterests = [
     "Hispanic and latino american culture",
@@ -102,7 +104,6 @@ const HispanicInterests = [
     "La Raza"
 ];
 const lgbtqInterests = [
-
     "Gay pride", 
     "LGBT community", 
     "Homosexuality", 
@@ -124,17 +125,17 @@ const lgbtqInterests = [
 
 const leftWingInterests = [
     "Anarchism",
-"Anarcho-capitalism",
-"Anonymous (group)",
-"Anti-Racist Action",
-"Anti-discrimination",
-"Anti-fascism",
-"Anti-racism",
-"Anti-war movement",
-"Social justice",
-"Filming Cops",
-"Bernie Sanders",
-"Liberalism",
+    "Anarcho-capitalism",
+    "Anonymous (group)",
+    "Anti-Racist Action",
+    "Anti-discrimination",
+    "Anti-fascism",
+    "Anti-racism",
+    "Anti-war movement",
+    "Social justice",
+    "Filming Cops",
+    "Bernie Sanders",
+    "Liberalism",
 ]
 
 const leftWingLikes = [
@@ -145,16 +146,14 @@ const leftWingLikes = [
 const veteransInterests = [
 
     "Iraq and Afghanistan Veterans of America",
-"Vietnam Veterans of America Foundation",
-"Veterans For America",
-"Support our troops",
-"US Military Veterans",
-"Vietnam Veterans of America",
-"Support Our Veterans",
-"Concerned Veterans for America",
-"Supporting Our Veterans",
-
-
+    "Vietnam Veterans of America Foundation",
+    "Veterans For America",
+    "Support our troops",
+    "US Military Veterans",
+    "Vietnam Veterans of America",
+    "Support Our Veterans",
+    "Concerned Veterans for America",
+    "Supporting Our Veterans",
 ]
 const muslimInterests = [
     "Islam",
@@ -256,27 +255,27 @@ const rightWingInterests = [
     "TheBlaze",
     "Donald Trump Jr.",
     "Texas Nationalist Movement",
-"Hog Hunting Texas Style",
-"Texas Secession",
-"Texas Hog Hunting",
-"Don't Mess with Texas",
-"Texas Gun Owner",
-"Texas Deer Association",
-"Texas Parks and Wildlife - Hunt",
-"Don't Mess with Texas Program",
-"Texas secession movements",
-"Republic of Texas",
-"Houston, Texas",
-"made in texas",
-"Texas Deer Hunting",
-"Texas Born Texas Proud",
-"Daughters of the Republic of Texas",
-"The Texas Huntress",
-"Texas Got It Right",
-"Texas Values",
-"Open Carry Texas",
-"Texas Gun Talk",
-"Keep Texas Working",
+    "Hog Hunting Texas Style",
+    "Texas Secession",
+    "Texas Hog Hunting",
+    "Don't Mess with Texas",
+    "Texas Gun Owner",
+    "Texas Deer Association",
+    "Texas Parks and Wildlife - Hunt",
+    "Don't Mess with Texas Program",
+    "Texas secession movements",
+    "Republic of Texas",
+    "Houston, Texas",
+    "made in texas",
+    "Texas Deer Hunting",
+    "Texas Born Texas Proud",
+    "Daughters of the Republic of Texas",
+    "The Texas Huntress",
+    "Texas Got It Right",
+    "Texas Values",
+    "Open Carry Texas",
+    "Texas Gun Talk",
+    "Keep Texas Working",
 ];
 
 
@@ -303,19 +302,17 @@ const christianInterests = [
 "Jesus"
 ];
 
-
 const prisonersInterests = [
-
     "Prison-industrial complex",
-"Corrections Corporation of America",
-"American Correctional Association",
-"Incarceration in the United States",
-"The Inmates",
-"Children Of Inmates",
-"Prison Wives",
-"School-to-prison pipeline",
+    "Corrections Corporation of America",
+    "American Correctional Association",
+    "Incarceration in the United States",
+    "The Inmates",
+    "Children Of Inmates",
+    "Prison Wives",
+    "School-to-prison pipeline",
 ];
-const GunOwnersInterests = [
+const gunOwnersInterests = [
     
     "Protect the Second Amendment",
     "Preserve our right to keep and bear arms",
@@ -352,7 +349,6 @@ const libertariansInterests = [
     "Minarchism",
     "Anarcho-capitalism"
 ];
-
 
 ///need job to find police force///
 
@@ -398,37 +394,34 @@ const PoliceInterests = [
 "Heroes Behind The Badge"
 ];
 
-
-
 const firstNationInterests = [
-    "American Indian Movement",
-"Native American Indian Wisdom",
-"Cherokee language",
-"Cherokee Nation"
+        "American Indian Movement",
+    "Native American Indian Wisdom",
+    "Cherokee language",
+    "Cherokee Nation"
 ];
 
+
 module.exports = {
-    blackPowerCulturalAfinity,
     blackPowerInterests,
     blackPowerLikes,
-    PoliceInterests,
-    firstNationInterests,
-    libertariansInterests,
-    GunOwnersInterests,
-    prisonersInterests,
-    christianInterests,
-    rightWingInterests,
-    muslimInterests,
-    veteransInterests,
-    leftWingInterests,
+    blackPowerCulturalAfinity,
     blackPowerExclude,
-    policeForceJobtitle,
-    leftWingLikes,
-    gbtqInterests,
-    lgbtqInterests,
-    HispanicInterests,
     antiMuslimInterests,
+    antiMuslimLikes,
     whiteNationalistInterests,
-    antiMuslimLikes
-    
-}   
+    HispanicInterests,
+    lgbtqInterests,
+    leftWingLikes,
+    leftWingInterests,
+    veteransInterests,
+    muslimInterests,
+    rightWingInterests,
+    christianInterests,
+    prisonersInterests,
+    gunOwnersInterests,
+    libertariansInterests,
+    policeForceJobtitle,
+    policeInterests,
+    firstNationInterests
+}
