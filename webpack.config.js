@@ -17,7 +17,22 @@ module.exports = (env, options) => {
       ]
     },
     entry: {
-      'app': glob.sync('./vendor/**/*.js').concat(['./js/app.js'])
+      'adsWithState': glob.sync('./vendor/**/*.js').concat(['./js/adsWithState.js']),
+      'app': glob.sync('./vendor/**/*.js').concat(['./js/app.js']),
+      'advertarray': glob.sync('./vendor/**/*.js').concat(['./js/advertarray.js']),
+      'allAdsUSE': glob.sync('./vendor/**/*.js').concat(['./js/allAdsUSA.js']),
+      'allAdsWithState': glob.sync('./vendor/**/*.js').concat(['./js/allAdsWithState.js']),
+      'apiFilter': glob.sync('./vendor/**/*.js').concat(['./js/apiFilter.js']),
+      'chart': glob.sync('./vendor/**/*.js').concat(['./js/chart.js']),
+      'coordinates': glob.sync('./vendor/**/*.js').concat(['./js/coordinates.js']),
+      'counter': glob.sync('./vendor/**/*.js').concat(['./js/counter.js']),
+      'data': glob.sync('./vendor/**/*.js').concat(['./js/data.js']),
+      'displayAdsByTargetGroup': glob.sync('./vendor/**/*.js').concat(['./js/displayAdsByTargetGroup.js']),
+      'header': glob.sync('./vendor/**/*.js').concat(['./js/header.js']),
+      'peter-advert': glob.sync('./vendor/**/*.js').concat(['./js/peter-advert.js']),
+      'svg-map': glob.sync('./vendor/**/*.js').concat(['./js/svg-map.js']),
+      'targetGroups': glob.sync('./vendor/**/*.js').concat(['./js/targetGroups.js']),
+      'totals': glob.sync('./vendor/**/*.js').concat(['./js/totals.js'])
     },
     output: {
       filename: '[name].js',
