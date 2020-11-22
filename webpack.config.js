@@ -56,6 +56,10 @@ module.exports = (env, options) => {
             'css-loader',
             'sass-loader',
           ],
+        },
+        {
+          test: /\.(png|jpg|gif|svg)$/,
+          loader: "file-loader?name=/images/[name].[ext]"
         }
       ]
     },
